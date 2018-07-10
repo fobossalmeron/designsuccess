@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
-import HomeSection from "./presentational/HomeSection";
-import WorkSection from "./presentational/WorkSection";
-import AboutSection from "./presentational/AboutSection";
-import ServicesSection from "./presentational/ServicesSection";
-import ContactSection from "./presentational/ContactSection";
+import WhoSection from "./presentational/WhoSection";
+import WhatSection from "./presentational/WhatSection";
+import HowSection from "./presentational/HowSection";
+import TrustedSection from "./presentational/TrustedSection";
+import EngageSection from "./presentational/EngageSection";
 import scrollToComponent from "react-scroll-to-component";
 import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../assets/img/social/instagram.svg";
 import UnderConstructionIcon from "svg-react-loader?name=UnderConstruction!../../assets/img/underconstruction.svg";
@@ -103,48 +103,48 @@ class App extends Component {
           hideNav={this.hideNav.bind(this)}
           menuOn={this.state.menuOn}
           closeModal={this.closeModal.bind(this)}
-          scrollToHome={() =>
-            scrollToComponent(this.Home, { offset: 0, align: "top" })
+          scrollToWho={() =>
+            scrollToComponent(this.Who, { offset: 0, align: "top" })
           }
-          scrollToAbout={() =>
-            scrollToComponent(this.About, { offset: -45, align: "top" })
+          scrollToWhat={() =>
+            scrollToComponent(this.What, { offset: -45, align: "top" })
           }
-          scrollToServices={() =>
-            scrollToComponent(this.Services, { offset: -45, align: "top" })
+          scrollToHow={() =>
+            scrollToComponent(this.How, { offset: -45, align: "top" })
           }
-          scrollToWork={() =>
-            scrollToComponent(this.Work, { offset: -45, align: "top" })
+          scrollToTrusted={() =>
+            scrollToComponent(this.Trusted, { offset: -45, align: "top" })
           }
-          scrollToContact={() =>
-            scrollToComponent(this.Contact, { offset: -45, align: "top" })
+          scrollToEngage={() =>
+            scrollToComponent(this.Engage, { offset: -45, align: "top" })
           }
         />
-        <HomeSection
+        <WhoSection
           ref={section => {
-            this.Home = section;
+            this.Who = section;
           }}
         />
-        <AboutSection
+        <WhatSection
           ref={section => {
-            this.About = section;
+            this.What = section;
           }}
         />
-        <WorkSection
+        <HowSection
           ref={section => {
-            this.Work = section;
+            this.How = section;
           }}
           modalOpen={this.state.modalOpen}
           openModal={this.openModal.bind(this)}
           closeModal={this.closeModal.bind(this)}
         />
-        <ServicesSection
+        <TrustedSection
           ref={section => {
-            this.Services = section;
+            this.Trusted = section;
           }}
         />
-        <ContactSection
+        <EngageSection
           ref={section => {
-            this.Contact = section;
+            this.Engage = section;
           }}
         />
       </div>

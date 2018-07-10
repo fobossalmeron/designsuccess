@@ -1,2 +1,2 @@
-# digitalIt
-Digital:Success website
+# designSuccess
+Design:Success website

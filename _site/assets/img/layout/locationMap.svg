@@ -4,9 +4,11 @@
 	.st1{fill:#FDED22;}
 </style>
 		<linearGradient id="gradientTest" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset=".5" style="stop-color:#00FFFF"/>
-			<stop  offset="1" style="stop-color:#0000FF"/>
+		<stop  offset="0" style="stop-color:#22233F"/>
+		<stop  offset=".1" style="stop-color:#22233F"/>
+		<stop  offset=".4" style="stop-color:#87E8F7"/>
+		<stop  offset=".8" style="stop-color:#22233F"/>
+		<stop  offset="1" style="stop-color:#22233F"/>
 		</linearGradient>
 	<rect x="404.6" y="20.7" fill="url(#gradientTest)" width="4.8" height="4.8"/>
 	<rect x="390.2" y="27.9" fill="url(#gradientTest)" width="4.8" height="4.8"/>

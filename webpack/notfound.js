@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 import Nav from './components/Nav';
-import ContactSection from './components/presentational/ContactSection';
+import EngageSection from './components/presentational/EngageSection';
 
 class NotFound extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class NotFound extends Component {
              toggleMenu={this.toggleMenu.bind(this)}
              hideNav={this.hideNav.bind(this)}
              menuOn={this.state.menuOn}  />
-        <ContactSection/>
+        <EngageSection/>
       </div>
     );
   }

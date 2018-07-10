@@ -46,54 +46,54 @@ class Nav extends Component {
     }
   }
 
-  doScrollToHome(event) {
+  doScrollToWho(event) {
     this.props.closeModal();
-    if (typeof this.props.scrollToHome !== "undefined") {
+    if (typeof this.props.scrollToWho !== "undefined") {
       event.preventDefault();
-      this.props.scrollToHome();
+      this.props.scrollToWho();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#");
+        history.pushState("", document.title, "#who");
       }
     }
   }
 
-  doScrollToAbout(event) {
+  doScrollToWhat(event) {
     this.props.closeModal();
-    if (typeof this.props.scrollToAbout !== "undefined") {
+    if (typeof this.props.scrollToWhat !== "undefined") {
       event.preventDefault();
-      this.props.scrollToAbout();
+      this.props.scrollToWhat();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#what&how");
+        history.pushState("", document.title, "#what");
       }
     }
   }
-  doScrollToWork() {
+  doScrollToHow() {
     this.props.closeModal();
-    if (typeof this.props.scrollToWork !== "undefined") {
+    if (typeof this.props.scrollToHow !== "undefined") {
       event.preventDefault();
-      this.props.scrollToWork();
+      this.props.scrollToHow();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#work");
+        history.pushState("", document.title, "#how");
       }
     }
   }
-  doScrollToServices() {
+  doScrollToTrusted() {
     this.props.closeModal();
-    if (typeof this.props.scrollToServices !== "undefined") {
+    if (typeof this.props.scrollToTrusted !== "undefined") {
       event.preventDefault();
-      this.props.scrollToServices();
+      this.props.scrollToTrusted();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#serviceareas");
+        history.pushState("", document.title, "#trustedby");
       }
     }
   }
-  doScrollToContact() {
+  doScrollToEngage() {
     this.props.closeModal();
-    if (typeof this.props.scrollToContact !== "undefined") {
+    if (typeof this.props.scrollToEngage !== "undefined") {
       event.preventDefault();
-      this.props.scrollToContact();
+      this.props.scrollToEngage();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#contact");
+        history.pushState("", document.title, "#engage");
       }
     }
   }
@@ -119,21 +119,17 @@ class Nav extends Component {
     return (
       <header>
         <div className="headerWrapper">
-          <a className="hideText" href="http://designsuccess.com">
-            <DesignSuccess className="designSuccessLogo" />
-            <DesignSuccessMobile className="designSuccessLogoMobile" />
-            design:success
-          </a>
           <a
             onClick={() => {
               this.doHideNav();
-              this.doScrollToHome(event);
+              this.doScrollToWho(event);
             }}
-            href={baseUrl + "#home"}
-            className="hideText a"
+            href={baseUrl + "#who"}
+            className="hideText"
           >
-            <DigitalSuccess className="websiteLogo" id="websiteLogo" />
-            digital:success
+            <DesignSuccess className="designSuccessLogo" />
+            <DesignSuccessMobile className="designSuccessLogoMobile" />
+            design:success
           </a>
           <HamburgerIcon
             id="hamburger"
@@ -145,34 +141,42 @@ class Nav extends Component {
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToAbout(event);
+                  this.doScrollToWho(event);
                 }}
               >
-                <a href={baseUrl + "#what&amp;how"}>what &amp; how</a>
+                <a href={baseUrl + "#who"}>who</a>
               </li>
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToWork(event);
+                  this.doScrollToWhat(event);
                 }}
               >
-                <a href={baseUrl + "#work"}>work</a>
+                <a href={baseUrl + "#what"}>what</a>
               </li>
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToServices();
+                  this.doScrollToHow(event);
                 }}
               >
-                <a href={baseUrl + "#serviceareas"}>service areas</a>
+                <a href={baseUrl + "#how"}>how</a>
               </li>
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToContact();
+                  this.doScrollToTrusted();
                 }}
               >
-                <a href={baseUrl + "#contact"}>contact</a>
+                <a href={baseUrl + "#trustedby"}>trusted by</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToEngage();
+                }}
+              >
+                <a href={baseUrl + "#engage"}>engage</a>
               </li>
             </ul>
           </nav>

@@ -1,8 +1,0 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 459.2 563.4" style="enable-background:new 0 0 459.2 563.4;" xml:space="preserve">
-<linearGradient id="1graphic7" gradientUnits="userSpaceOnUse" x1="1.1664" y1="281.9263" x2="228.3452" y2="281.9263">
-	<stop  offset="0" style="stop-color:#00FFFF"/>
-	<stop  offset="1" style="stop-color:#0000FF"/>
-</linearGradient>
-<polygon fill="url(#1graphic7)" points="1.2,563 228.3,434 228.3,0.8 1.2,131.8 "/>
-</svg>

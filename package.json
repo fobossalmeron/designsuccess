@@ -1,11 +1,11 @@
 {
-  "name": "digitalsuccess",
+  "name": "designsuccess",
   "version": "1.0.0",
-  "description": "website for digitalsuccess.com",
+  "description": "website for designsuccess.com",
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fobossalmeron/digitalsuccess.git"
+    "url": "git+https://github.com/fobossalmeron/designsuccess.git"
   },
   "scripts": {
     "start": "webpack -w",
