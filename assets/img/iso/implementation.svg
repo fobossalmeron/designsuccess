@@ -1,0 +1,34 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 319 707" style="enable-background:new 0 0 319 707;" xml:space="preserve">
+<style type="text/css">
+	.gradiented{fill:none;stroke:url(#GRADIENT);}
+</style>
+	<linearGradient id="GRADIENT" gradientUnits="userSpaceOnUse" x1="66.4329" y1="402.6029" x2="250.5955" y2="402.6029">
+		<stop  offset="0" style="stop-color:#22233F"/>
+		<stop  offset=".5" style="stop-color:#87E8F7"/>
+		<stop  offset="1" style="stop-color:#22233F"/>
+	</linearGradient>	 
+	<g id="back" class="gradiented">
+		<g>
+			<line x1="316.6" y1="394.4" x2="2.1" y2="7.1"/>
+			<line x1="316.6" y1="397" x2="2.1" y2="60.4"/>
+			<line x1="316.6" y1="399.7" x2="2.1" y2="113.7"/>
+			<line x1="316.6" y1="402.3" x2="2.1" y2="167"/>
+			<line x1="316.6" y1="405" x2="2.1" y2="220.4"/>
+			<line x1="316.6" y1="407.6" x2="2.1" y2="273.7"/>
+			<line x1="316.6" y1="410.3" x2="2.1" y2="327"/>
+			<line x1="316.6" y1="412.9" x2="2.1" y2="380.3"/>
+			<line x1="316.6" y1="415.6" x2="2.1" y2="433.6"/>
+			<line x1="316.6" y1="418.2" x2="2.1" y2="486.9"/>
+			<line x1="316.6" y1="420.9" x2="2.1" y2="540.2"/>
+			<line x1="316.6" y1="423.5" x2="2.1" y2="593.5"/>
+			<line x1="316.6" y1="426.1" x2="2.1" y2="646.8"/>
+			<line x1="316.6" y1="428.8" x2="2.1" y2="700.1"/>
+		</g>
+</g>
+<g id="front" class="gradiented">
+	<line x1="316.6" y1="412.9" x2="2.1" y2="380.3"/>
+	<line x1="316.6" y1="415.6" x2="2.1" y2="433.6"/>
+	<line x1="316.6" y1="418.2" x2="2.1" y2="486.9"/>
+</g>
+</svg>

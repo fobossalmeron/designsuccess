@@ -1,0 +1,26 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 319 707" style="enable-background:new 0 0 319 707;" xml:space="preserve">
+<style type="text/css">
+	.gradiented{fill:none;stroke:url(#GRADIENT);}
+</style>
+	<linearGradient id="GRADIENT" gradientUnits="userSpaceOnUse" x1="66.4329" y1="402.6029" x2="250.5955" y2="402.6029">
+		<stop  offset="0" style="stop-color:#22233F"/>
+		<stop  offset=".5" style="stop-color:#87E8F7"/>
+		<stop  offset="1" style="stop-color:#22233F"/>
+	</linearGradient>
+<g id="back" class="gradiented">
+	<circle cx="123.7" cy="448.7" r="173.8"/>
+	<circle cx="82.6" cy="434.4" r="130.8"/>
+	<circle cx="145.9" cy="447.9" r="196"/>
+	<circle cx="150.3" cy="411.4" r="12.7"/>
+	<circle cx="158.4" cy="422.5" r="26.8"/>
+	<circle cx="168.7" cy="434.8" r="43.1"/>
+	<circle cx="131" cy="434.1" r="80.9"/>
+</g>
+<g id="first" class="gradiented">
+	<circle cx="150.3" cy="411.4" r="12.7"/>
+	<circle cx="158.4" cy="422.5" r="26.8"/>
+	<circle cx="168.7" cy="434.8" r="43.1"/>
+	<circle cx="131" cy="434.1" r="80.9"/>
+</g>
+</svg>
