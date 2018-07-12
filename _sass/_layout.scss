@@ -505,7 +505,14 @@ h2 {
         margin: 3% 0px 5% 0px;
         display: flex;
         flex-direction: row;
-        z-index: 1;
+        z-index: 0;
+        opacity:0;
+        transition: opacity 500ms 0ms;
+        &.active{
+            opacity:1;
+            z-index: 1;
+            transition: opacity 1200ms 200ms;
+        }
         .textArea {
             width: 35%;
             padding: 1% 1% 1% 0;

@@ -1,39 +1,44 @@
 import React, { Component } from "react";
 
-class PortfolioModal extends Component {
-  constructor(props) {
-    super(props);
+const PortfolioModal = (props) => {
+  const componentClasses = ["sectionModal"];
+  if (props.modalToggled) {
+    componentClasses.push("active");
   }
-
-  render() {
-    var section = this.props.section;
-    var proyectList = this.props.section.proyects.map((proyect, index) => (
-      <li
-        key={proyect.id + "listed"}
-        className={"proyect" + proyect.id}
-        onClick={() => this.props.changeSection(section)}
-        style={{backgroundImage:`url(assets/img/portfolio/${section.id}/${proyect.id}/cover.jpg)`}}
-      >
-        <h5>{proyect.title}</h5>
-      </li>
-    ));
-    var sectionId = "section" + section.id;
-    return (
-      <div className="sectionModal">
-        <a className="close" onClick={() => this.props.closeModal()} />
-        <a className="next" onClick={() => this.props.nextModal(section)} />
-        <a
-          className="next prev"
-          onClick={() => this.props.prevModal(section)}
-        />
-        <div className="textArea">
-          <h3 dangerouslySetInnerHTML={{ __html: section.title }} />
-          <p dangerouslySetInnerHTML={{ __html: section.generalText }} />
-        </div>
-        <ul className="galleryArea" id={"section" + section.id}>{proyectList}</ul>
+  return (
+    <div className={componentClasses.join(" ")}>
+      <a className="close" onClick={() => props.closeModal()} />
+      <a className="next" onClick={() => props.nextModal(section)} />
+      <a className="next prev" onClick={() => props.prevModal(section)} />
+      <div className="textArea">
+        <h3 dangerouslySetInnerHTML={{ __html: props.section.title }} />
+        <p dangerouslySetInnerHTML={{ __html: props.section.generalText }} />
       </div>
-    );
-  }
+      <ul className="galleryArea" id={"section" + props.section.id}>
+        {props.section.proyects.map((proyect, index) => (
+          <li
+            key={proyect.id + "listed"}
+            className={"proyect" + proyect.id}
+            onClick={() => props.changeSection(props.section)}
+            style={{
+              backgroundImage: `url(assets/img/portfolio/${
+                props.section.id
+              }/${proyect.id}/cover.jpg)`
+            }}
+          >
+            <h5>{proyect.title}</h5>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+PortfolioModal.propTypes = {
+  modalToggled: React.PropTypes.bool.isRequired
+};
+PortfolioModal.defaultProps = {
+  section: {id:1,title:"hi", icon: "hi"}
 }
 
 export default PortfolioModal;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ContactForm from "./../ContactForm";
-import DigitalSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../../assets/img/layout/digitalSuccess.svg";
+import DesignSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../../assets/img/layout/designSuccess.svg";
 import LocationMap from "svg-react-loader?name=LocationMap!../../../assets/img/layout/locationMap.svg";
 import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../../assets/img/social/instagram.svg";
 import FacebookIcon from "svg-react-loader?name=FacebookIcon!../../../assets/img/social/facebook.svg";
@@ -18,7 +18,7 @@ class EngageSection extends Component {
   render() {
     return (
       <section id="contact">
-        <DigitalSuccess className="engageLogo" />
+        <DesignSuccess className="engageLogo" />
         <h2>challenges welcome</h2>
         <div className="locationContact">
           <ul className="chooseList">

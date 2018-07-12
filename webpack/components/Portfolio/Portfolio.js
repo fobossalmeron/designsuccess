@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PortfolioModal from "./portfolioModal";
+import { Transition } from "react-transition-group";
+import { CSSTransition } from 'react-transition-group';
 import InnovationIcon from "svg-react-loader?name=InnovationIcon!../../../assets/img/what/innovation.svg";
 import InsightIcon from "svg-react-loader?name=InsightIcon!../../../assets/img/what/insight.svg";
 import BrandingIcon from "svg-react-loader?name=BrandingIcon!../../../assets/img/what/branding.svg";
@@ -49,31 +51,31 @@ const sectionData = {
           title: "1% is a lot!",
           text:
             "challenge:</br>Increase profits in Coca-Cola’s carbonated beverage segment with fast implementable solutions.</br></br>solution:</br>We developed multiple fast implementable innovations then validated each one through our patented innovation:lab process. With rigorous analyzation we identified the right innovations to lift single serve sales. Increasing profitability by more than 1%, and 1% is a lot when you are The Coca-Cola Company.</br></br>result:</br>Sales exceeded 1% within 6 months",
-             images: []
+          images: []
         },
         {
           id: 3,
           title: "strategy in 40 days!",
-          text:"",
-             images: []
+          text: "",
+          images: []
         },
         {
           id: 4,
           title: "first innovation in 500 years",
-          text:"",
-             images: []
+          text: "",
+          images: []
         },
         {
           id: 5,
           title: "the sky’s the limit",
-          text:"",
-             images: []
+          text: "",
+          images: []
         },
         {
           id: 6,
           title: "creating a real friend",
-          text:"",
-             images: []
+          text: "",
+          images: []
         }
       ]
     },
@@ -114,7 +116,9 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSection: "",
+      selectedSection: sectionData.sections.find(
+        section => section.id === 1
+      ),
       modalToggled: false
     };
   }
@@ -158,6 +162,7 @@ class Portfolio extends Component {
   }
 
   render() {
+    const { modalToggled } = this.state;
     var myself = this;
     var sectionsList = sectionData.sections.map((section, index) => (
       <li
@@ -177,7 +182,8 @@ class Portfolio extends Component {
     ));
     var sectionModal = (
       <PortfolioModal
-        section={this.state.selectedSection}
+        modalToggled={this.state.modalToggled}
+        section={this.state.selectedSection? this.state.selectedSection : null}
         sections={sectionData.sections}
         changeSection={this.toggleModal.bind(this)}
         prevModal={this.prevModal.bind(this)}
@@ -190,7 +196,7 @@ class Portfolio extends Component {
     var modalActive = this.state.modalToggled ? "modalToggled" : null;
     return (
       <div className="sectionContainer">
-        {isModalToggled}
+          {sectionModal}
         <ul className={"sectionList " + modalActive}>{sectionsList}</ul>
       </div>
     );

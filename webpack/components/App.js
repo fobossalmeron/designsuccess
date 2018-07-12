@@ -56,10 +56,6 @@ class App extends Component {
     }
   }
 
-  goToTab(index) {
-    this.setState({ tabIndex: index });
-  }
-
   render() {
     var maintenanceScreen = (
       <div className="loading">
@@ -141,6 +137,9 @@ class App extends Component {
           ref={section => {
             this.Trusted = section;
           }}
+          modalOpen={this.state.modalOpen}
+          openModal={this.openModal.bind(this)}
+          closeModal={this.closeModal.bind(this)}
         />
         <EngageSection
           ref={section => {
