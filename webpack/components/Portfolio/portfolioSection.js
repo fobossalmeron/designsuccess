@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class PortfolioModal extends Component {
+class SectionPortfolio extends Component {
   constructor(props) {
     super(props);
   }
@@ -11,7 +11,7 @@ class PortfolioModal extends Component {
       <li
         key={proyect.id + "listed"}
         className={"proyect" + proyect.id}
-        onClick={() => this.props.toggleSubModal(proyect)}
+        onClick={() => this.props.toggleProyect(proyect)}
         style={{
           backgroundImage: `url(assets/img/portfolio/${section.id}/${
             proyect.id
@@ -22,8 +22,8 @@ class PortfolioModal extends Component {
       </li>
     ));
     return (
-      <div className={this.props.modalToggled? "sectionModal active" : "sectionModal"}>
-        <a className="close" onClick={() => this.props.closeModal()} />
+      <div className={this.props.sectionToggled? "sectionModal active" : "sectionModal"}>
+        <a className="close" onClick={() => this.props.closeSection()} />
         <a className="next" onClick={() => this.props.nextModal(section)} />
         <a
           className="next prev"
@@ -41,4 +41,4 @@ class PortfolioModal extends Component {
   }
 }
 
-export default PortfolioModal;
+export default SectionPortfolio;

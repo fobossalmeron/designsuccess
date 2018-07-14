@@ -552,6 +552,42 @@ h2 {
         z-index: 0;
         opacity: 0;
         transition: opacity 500ms 0ms;
+        .next{
+            display:none;
+        }
+        &.resourceModal {
+            right: 0;
+            left: unset;
+            max-width: 57.2%;
+            align-self: flex-end;
+            justify-self: flex-end;
+            margin: 3% 5% 5% 0%;
+            .imageResource {
+                width: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height: 93.5%;
+                margin: 2% 0;
+                background-color: black;
+            }
+            .videoResource {
+                width: 100% !important;
+                height: 0 !important;
+                padding-bottom: 60%;
+                margin: 1px 0;
+                display: flex;
+                position: relative;
+                iframe {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
         &.proyectModal {
             background-color: black;
             z-index: 0;
@@ -589,6 +625,11 @@ h2 {
             z-index: 2;
             transition: opacity 1200ms 200ms;
         }
+        &.active3 {
+            opacity: 1;
+            z-index: 3;
+            transition: opacity 800ms 200ms;
+        }
         .textArea {
             width: 35%;
             padding: 1% 1% 1% 0;
@@ -613,15 +654,15 @@ h2 {
                 background-position: top center;
                 cursor: pointer;
                 position: relative;
-                &.static{
+                &.static {
                     cursor: default;
-                    &:after{
-                        display:none;
+                    &:after {
+                        display: none;
                     }
                 }
                 &:hover {
                     &:after {
-                        opacity:0;
+                        opacity: 0;
                     }
                 }
                 &:after {
@@ -632,9 +673,10 @@ h2 {
                     right: 0;
                     bottom: 0;
                     z-index: 1;
-                    opacity:0.3;
+                    opacity: 0.3;
                     background-color: black;
                     transition: opacity .5s ease;
+                    cursor: pointer;
                 }
                 h5 {
                     font-size: 3.5rem;
@@ -653,7 +695,7 @@ h2 {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 9rem;
-        &.modalToggled {
+        &.sectionToggled {
             .section {
                 h3 {
                     font-size: 1.5rem;
@@ -661,13 +703,16 @@ h2 {
                     transform: translateY(-160px);
                     &.active {
                         color: white;
-                        font-size: 1.9rem;
+                        transform: translateY(-160px) scale(1.2);
                         font-weight: 600;
                     }
                 }
                 &~.section~.section~.section {
                     h3 {
                         transform: translateY(160px);
+                        &.active {
+                            transform: translateY(160px) scale(1.2);
+                        }
                     }
                 }
                 .sectionIcon {
@@ -740,6 +785,12 @@ h2 {
     .resource1,
     .resource6 {
         grid-column-end: span 2;
-        font-size: 5rem;
+    }
+}
+
+#proyect2 {
+    .resource1,
+    .resource2 {
+        grid-column-end: span 2;
     }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PlayIcon from "svg-react-loader?name=PlayIcon!../../../assets/img/layout/playButton.svg";
 
-class PortfolioSubModal extends Component {
+class ProyectPortfolio extends Component {
   constructor(props) {
     super(props);
   }
@@ -13,11 +13,11 @@ class PortfolioSubModal extends Component {
       <li
         key={index + "sublisted"}
         className={"resource" + (index + 1) + (resource.type !== "video" ? " static" : null)}
-        onClick={() => console.log("sub modal toggled " + index)}
+        onClick={() => this.props.toggleResource(resource)}
         style={{
           backgroundImage: `url(assets/img/portfolio/${section.id}/${
             proyect.id
-          }/${index + 1}.jpg)`
+          }/${resource.id}.jpg)`
         }}
       >
         {resource.type === "video" ? <PlayIcon /> : null}
@@ -26,12 +26,12 @@ class PortfolioSubModal extends Component {
     return (
       <div
         className={
-          this.props.subModalToggled
+          this.props.proyectToggled
             ? "sectionModal proyectModal active2"
             : "sectionModal proyectModal"
         }
       >
-        <a className="close" onClick={() => this.props.closeSubModal()} />
+        <a className="close" onClick={() => this.props.closeProyect()} />
         <a className="next" onClick={() => this.props.nextModal(proyect)} />
         <a
           className="next prev"
@@ -49,4 +49,4 @@ class PortfolioSubModal extends Component {
   }
 }
 
-export default PortfolioSubModal;
+export default ProyectPortfolio;

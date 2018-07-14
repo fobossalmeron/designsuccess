@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import InnovationIcon from "svg-react-loader?name=InnovationIcon!./../../assets/img/what/innovation.svg";
 import InsightIcon from "svg-react-loader?name=InsightIcon!./../../assets/img/what/insight.svg";
 import BrandingIcon from "svg-react-loader?name=BrandingIcon!./../../assets/img/what/branding.svg";
@@ -22,23 +22,29 @@ const portfolioData = {
             "<b>Global innovation transformation.</b></br></br>design:success was trusted to innovate for numerous MoneyGram’s global innovation projects. From insight gathering, innovation strategy, UI & IT development, brand optimization, experience creations as well as a US advertising campaign across all multiple platforms and targets, we shaped and actualized true 360 degree innovations from A-to-Z.</br></br><b>results:</b></br>Extremely high consumer satisfaction and growth in shareholder value.",
           resources: [
             {
+              id: 1,
               type: "image"
             },
             {
+              id: 2,
               type: "video",
               url: "https://vimeo.com/219006755"
             },
             {
+              id: 3,
               type: "video",
               url: "https://vimeo.com/219010169"
             },
             {
+              id: 4,
               type: "image"
             },
             {
+              id: 5,
               type: "image"
             },
             {
+              id: 6,
               type: "image"
             }
           ]
@@ -47,32 +53,57 @@ const portfolioData = {
           id: 2,
           title: "1% is a lot!",
           text:
-            "challenge:</br>Increase profits in Coca-Cola’s carbonated beverage segment with fast implementable solutions.</br></br>solution:</br>We developed multiple fast implementable innovations then validated each one through our patented innovation:lab process. With rigorous analyzation we identified the right innovations to lift single serve sales. Increasing profitability by more than 1%, and 1% is a lot when you are The Coca-Cola Company.</br></br>result:</br>Sales exceeded 1% within 6 months",
-          images: []
+            "<b>challenge:</b></br>Increase profits in Coca-Cola’s carbonated beverage segment with fast implementable solutions.</br></br><b>solution:</b></br>We developed multiple fast implementable innovations then validated each one through our patented innovation:lab process. With rigorous analyzation we identified the right innovations to lift single serve sales. Increasing profitability by more than 1%, and 1% is a lot when you are The Coca-Cola Company.</br></br><b>result:</b></br>Sales exceeded 1% within 6 months",
+          resources: [
+            {
+              id: 1,
+              type: "image"
+            },
+            {
+              id: 2,
+              type: "image"
+            },
+            {
+              id: 3,
+              type: "image"
+            },
+            {
+              id: 4,
+              type: "image"
+            },
+            {
+              id: 5,
+              type: "image"
+            },
+            {
+              id: 6,
+              type: "image"
+            }
+          ]
         },
         {
           id: 3,
           title: "strategy in 40 days!",
           text: "",
-          images: []
+          resources: []
         },
         {
           id: 4,
           title: "first innovation in 500 years",
           text: "",
-          images: []
+          resources: []
         },
         {
           id: 5,
           title: "the sky’s the limit",
           text: "",
-          images: []
+          resources: []
         },
         {
           id: 6,
           title: "creating a real friend",
           text: "",
-          images: []
+          resources: []
         }
       ]
     },
@@ -80,6 +111,8 @@ const portfolioData = {
       id: 2,
       title: "insight & strategy",
       icon: <InsightIcon />,
+      generalText:
+        "<b>Deep insight is THE key to develop THE perfect strategy!</b></br>And guaranteed results!</br></br><b>design:success</b> own in-house research agency is called find:out.</br>Specialized in 1 thing: finding insight & solutions where others can’t.</br></br>Using the best methodologies and mix. Even inventing new ones which we are very proud of; <b>QualQuant™</b> and <b>innovation:lab™</b></br></br>As the world’s only innovation agency we <b>guarantee results!</b>",
       proyects: []
     },
     {

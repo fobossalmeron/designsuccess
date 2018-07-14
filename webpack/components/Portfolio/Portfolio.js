@@ -1,30 +1,37 @@
 import React, { Component } from "react";
-import PortfolioModal from "./portfolioModal";
-import PortfolioSubModal from "./portfolioSubModal";
+import SectionPortfolio from "./portfolioSection";
+import ProyectPortfolio from "./portfolioProyect";
+import ResourcePortfolio from "./portfolioResource";
 import portfolioData from "./../../data/portfolio";
 
 class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSection: portfolioData.sections.find(
-        section => section.id === 1,
-      ),
-      modalToggled: false,
-      subModalToggled: false,
-      selectedProyect: portfolioData.sections[0].proyects[0]
+      selectedSection: portfolioData.sections[0],
+      selectedProyect: portfolioData.sections[0].proyects[0],
+      selectedResource: portfolioData.sections[0].proyects[0].resources[0],
+      sectionToggled: false,
+      proyectToggled: false,
+      resourceToggled: false
     };
   }
 
-  closeModal() {
+  closeSection() {
     this.setState({
-      modalToggled: false
+      sectionToggled: false
     });
   }
-  
-  closeSubModal(){
+
+  closeProyect() {
     this.setState({
-      subModalToggled: false
+      proyectToggled: false
+    });
+  }
+
+  closeResource() {
+    this.setState({
+      resourceToggled: false
     });
   }
 
@@ -53,34 +60,52 @@ class Portfolio extends Component {
     });
   }
 
-  toggleModal(selected) {
+  toggleSection(section) {
+    console.log("section Toggled");
     this.setState({
-      modalToggled: true,
-      subModalToggled: false,
-      selectedSection: selected
+      sectionToggled: true,
+      proyectToggled: false,
+      resourceToggled: false,
+      selectedSection: section
     });
   }
 
-  toggleSubModal(proyect) {
+  toggleProyect(proyect) {
+    console.log("proyectn Toggled");
     this.setState({
-      modalToggled: true,
-      subModalToggled: true,
+      sectionToggled: true,
+      proyectToggled: true,
+      resourceToggled: false,
       selectedProyect: proyect
     });
   }
+  toggleResource(resource) {
+    console.log("resource Toggled");
+    if (window.innerWidth > 1000 && resource.type === "image") {
+      console.log("resource was image and the browser is above 1000px");
+      return;
+    } else {
+      this.setState({
+        sectionToggled: true,
+        proyectToggled: true,
+        resourceToggled: true,
+        selectedResource: resource
+      });
+    }
+  }
 
   render() {
-    const { modalToggled } = this.state;
-    var myself = this;
+    var selectedSection = this.state.selectedSection;
+
     var sectionsList = portfolioData.sections.map((section, index) => (
       <li
         className="section"
         key={section.id}
-        onClick={() => this.toggleModal(section)}
+        onClick={() => this.toggleSection(section)}
       >
         <h3
           dangerouslySetInnerHTML={{ __html: section.title }}
-          className={myself.state.selectedSection === section ? "active" : ""}
+          className={selectedSection === section ? "active" : ""}
         />
         <div className={"sectionIcon " + "section" + section.id}>
           {section.icon}
@@ -88,36 +113,49 @@ class Portfolio extends Component {
         <p dangerouslySetInnerHTML={{ __html: section.desc }} />
       </li>
     ));
+
     var sectionModal = (
-      <PortfolioModal
-        modalToggled={this.state.modalToggled}
-        subModalToggled={this.state.subModalToggled}
+      <SectionPortfolio
+        sectionToggled={this.state.sectionToggled}
+        proyectToggled={this.state.proyectToggled}
         section={this.state.selectedSection}
         sections={portfolioData.sections}
-        toggleSubModal={this.toggleSubModal.bind(this)}
-        changeSection={this.toggleModal.bind(this)}
+        toggleProyect={this.toggleProyect.bind(this)}
+        changeSection={this.toggleSection.bind(this)}
         prevModal={this.prevModal.bind(this)}
         nextModal={this.nextModal.bind(this)}
-        closeModal={this.closeModal.bind(this)}
+        closeSection={this.closeSection.bind(this)}
       />
     );
     var proyectModal = (
-      <PortfolioSubModal
-        modalToggled={this.state.modalToggled}
-        subModalToggled={this.state.subModalToggled}
+      <ProyectPortfolio
+        sectionToggled={this.state.sectionToggled}
+        proyectToggled={this.state.proyectToggled}
         section={this.state.selectedSection}
         proyect={this.state.selectedProyect}
-        toggleSubModal={this.toggleSubModal.bind(this)}
-        closeSubModal={this.closeSubModal.bind(this)}
+        closeProyect={this.closeProyect.bind(this)}
+        toggleResource={this.toggleResource.bind(this)}
+      />
+    );
+    var resourceModal = (
+      <ResourcePortfolio
+        resourceToggled={this.state.resourceToggled}
+        proyectToggled={this.state.proyectToggled}
+        section={this.state.selectedSection}
+        proyect={this.state.selectedProyect}
+        resource={this.state.selectedResource}
+        toggleResource={this.toggleResource.bind(this)}
+        closeResource={this.closeResource.bind(this)}
       />
     );
 
-    var modalActive = this.state.modalToggled ? "modalToggled" : null;
+    var sectionActive = this.state.sectionToggled ? "sectionToggled" : null;
     return (
       <div className="sectionContainer">
-          {proyectModal}
-          {sectionModal}
-        <ul className={"sectionList " + modalActive}>{sectionsList}</ul>
+        {proyectModal}
+        {sectionModal}
+        {resourceModal}
+        <ul className={"sectionList " + sectionActive}>{sectionsList}</ul>
       </div>
     );
   }
