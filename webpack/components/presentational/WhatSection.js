@@ -19,11 +19,13 @@ class WhatSection extends Component {
     return (
       <section id="what">
         <div className="screen1 screen">
-        <h2>what</h2>
-        <Portfolio/>
+          <h2>what</h2>
+          <Portfolio />
         </div>
         <div className="screen2 screen">
-          <h2>more about...</h2>
+          <div className="encapsulator">
+            <h2>more about...</h2>
+          </div>
           <Microsites />
         </div>
       </section>

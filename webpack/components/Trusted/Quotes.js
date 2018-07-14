@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SingleQuote from "./SingleQuote";
 
 const quotesData = {
   leftQuotes: [
@@ -108,7 +109,7 @@ class Quotes extends Component {
     }
   }
 
-  delayQuote(){
+  delayQuote() {
     var newIndex = this.changeIndex(this.state.rightQuoteIndex);
     this.halfInterval = setTimeout(
       function() {
@@ -124,10 +125,7 @@ class Quotes extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(
-      () => this.changeQuotes(),
-      this.rotationTime
-    );
+    this.interval = setInterval(() => this.changeQuotes(), this.rotationTime);
   }
 
   componentWillUnmount() {
@@ -142,30 +140,20 @@ class Quotes extends Component {
     var rightQuote = quotesData.rightQuotes.find(
       quote => quote.id === this.state.rightQuoteIndex
     );
-    var actualLeftQuote = (
-      <div>
-        <p>
-          <span>“</span>
-          {leftQuote.quote}
-          <span>“</span>
-        </p>
-        <label>- {leftQuote.author}</label>
-      </div>
-    );
-    var actualRightQuote = (
-      <div>
-        <p>
-          <span>“</span>
-          {rightQuote.quote}
-          <span>“</span>
-        </p>
-        <label>- {rightQuote.author}</label>
-      </div>
-    );
+
+    var leftQuotes = quotesData.leftQuotes.map((quote, index) => (
+      <SingleQuote quote={quote} key={"quoteLeft" + index} selected={this.state.leftQuoteIndex === quote.id? "selected" : null}/>
+    ));
+    var rightQuotes = quotesData.rightQuotes.map((quote, index) => (
+      <SingleQuote quote={quote} key={"quoteRight" + index} selected={this.state.rightQuoteIndex === quote.id? "selected" : null}/>
+    ));
     return (
       <div className="firstColumned">
-        {actualLeftQuote}
-        {actualRightQuote}
+      <span>
+        {leftQuotes}
+        </span>
+        <span>
+        {rightQuotes}</span>
       </div>
     );
   }
