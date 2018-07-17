@@ -83,53 +83,53 @@ section {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    h1, h2{
+    h1,
+    h2 {
         font-family: $secondary-font-family;
         font-weight: 600;
         font-size: 8rem;
         line-height: 1;
-        text-align:left;
+        text-align: left;
         grid-column: 1 / span 1;
-        grid-row: 1 / span 1; 
-        span{
-            margin-left:21%;
+        grid-row: 1 / span 1;
+        span {
+            margin-left: 21%;
         }
     }
-    h2{
-        padding-left:0;
+    h2 {
+        padding-left: 0;
     }
-    p{
-        font-size:2.6rem;
+    p {
+        font-size: 2.6rem;
     }
-     ul{
+    ul {
         font-size: 2.2rem;
         list-style-type: square;
     }
-
-    .screen{
+    .screen {
         max-width: 1600px;
         margin: 0 auto;
         box-sizing: border-box;
         grid-gap: 2rem;
         height: 100vh
     }
-    .firstGrid{
+    .firstGrid {
         grid-template-columns: 1fr 1fr .8fr;
         padding: 0 10% 0 16%;
     }
-    .secondGrid{
+    .secondGrid {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0 10% 0 16%;
     }
-    .thirdGrid{
+    .thirdGrid {
         grid-template-columns: 1fr 1fr;
-        padding-left:16%;
+        padding-left: 16%;
         grid-gap: 10rem;
-
     }
 }
-#home{
-    .swiper-pagination{
+
+#home {
+    .swiper-pagination {
         right: 50px;
         top: 3%;
     }
@@ -142,9 +142,9 @@ section {
         opacity: 1;
         background: transparent;
         border: 1px solid white;
-        border-radius:0;
-        &:first-of-type{
-            display:none;
+        border-radius: 0;
+        &:first-of-type {
+            display: none;
         }
     }
 }
@@ -363,7 +363,7 @@ h2 {
                 .launchIcon {
                     padding: 8% 10%;
                     svg {
-                        display:none;
+                        display: none;
                     }
                     &::before {
                         content: 'click to launch';
@@ -589,8 +589,8 @@ h2 {
         z-index: 0;
         opacity: 0;
         transition: opacity 500ms 0ms;
-        .next{
-            display:none;
+        .next {
+            display: none;
         }
         &.resourceModal {
             right: 0;
@@ -640,10 +640,14 @@ h2 {
             }
             .textArea h3 {
                 display: block;
-                font-size: 5rem;
+                font-size: 4.5rem;
                 font-weight: bold;
                 line-height: 1.1;
                 font-family: $secondary-font-family;
+            }
+            a{
+                color:white;
+                font-weight:600;
             }
             &.active {
                 z-index: 2;
@@ -671,6 +675,23 @@ h2 {
             width: 35%;
             padding: 1% 1% 1% 0;
             font-size: 2.1rem;
+            max-height: 550px;
+            overflow-x: auto;
+            &::-webkit-scrollbar-track {
+                border:none;
+                background-color: black;
+            }
+            &::-webkit-scrollbar {
+                width: 2px;
+                border:none;
+                background-color: black;
+            }
+           &::-webkit-scrollbar-thumb {
+               border:none;
+               border-radius: 3px;
+                background-color: white;
+                margin-top: 5px;
+            }
             h3 {
                 display: none;
             }
@@ -818,15 +839,34 @@ h2 {
         font-size: 5rem;
     }
 }
+#section6 {
+    grid-template-rows: .8fr 1fr;
+    .proyect1,
+    .proyect2 {
+        grid-column-end: span 2;
+    }
+    .proyect3{
+        grid-column-end: span 4,
+    }
+}
 
 #proyect1 {
-    .resource1,
-    .resource6 {
+    .resource1 {
         grid-column-end: span 2;
+    }
+    .resource5 {
+        grid-column-end: span 3;
     }
 }
 
 #proyect2 {
+    .resource1,
+    .resource2 {
+        grid-column-end: span 2;
+    }
+}
+
+#proyect5, #proyect6 {
     .resource1,
     .resource2 {
         grid-column-end: span 2;

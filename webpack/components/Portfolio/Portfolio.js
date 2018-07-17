@@ -61,7 +61,6 @@ class Portfolio extends Component {
   }
 
   toggleSection(section) {
-    console.log("section Toggled");
     this.setState({
       sectionToggled: true,
       proyectToggled: false,
@@ -71,7 +70,6 @@ class Portfolio extends Component {
   }
 
   toggleProyect(proyect) {
-    console.log("proyectn Toggled");
     this.setState({
       sectionToggled: true,
       proyectToggled: true,

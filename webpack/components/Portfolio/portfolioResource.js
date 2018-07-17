@@ -10,6 +10,7 @@ class ResourcePortfolio extends Component {
     var resource = this.props.resource;
     var proyect = this.props.proyect;
     var section = this.props.section;
+    var imageType = resource.type === "vector"? "svg" : "jpg";
 
     var imageResource = (
       <div
@@ -17,7 +18,7 @@ class ResourcePortfolio extends Component {
         style={{
           backgroundImage: `url(assets/img/portfolio/${section.id}/${
             proyect.id
-          }/${resource.id}.jpg)`
+          }/${resource.id}.${imageType})`
         }}
       />
     );

@@ -398,7 +398,7 @@ const clientsData = {
         },
         {
           icon: <RufflesIcon />,
-          quote: " "
+          quote: "Repositioning and new packaging innovation for hero-brand Ruffles"
         },
         {
           icon: <CampbellsIcon />,

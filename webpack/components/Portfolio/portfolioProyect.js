@@ -12,12 +12,12 @@ class ProyectPortfolio extends Component {
     var resourcesList = proyect.resources.map((resource, index) => (
       <li
         key={index + "sublisted"}
-        className={"resource" + (index + 1) + (resource.type !== "video" ? " static" : null)}
+        className={"resource" + resource.id + (resource.type !== "video" ? " static" : "")}
         onClick={() => this.props.toggleResource(resource)}
         style={{
           backgroundImage: `url(assets/img/portfolio/${section.id}/${
             proyect.id
-          }/${resource.id}.jpg)`
+          }/${resource.id}.${resource.type === "vector"? "svg" : "jpg"})`
         }}
       >
         {resource.type === "video" ? <PlayIcon /> : null}
