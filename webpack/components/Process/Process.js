@@ -33,7 +33,7 @@ const processData = {
     },
     {
       id: 4,
-      title: "4:<br/>validation:innovation:lab",
+      title: "4:<br/>validation : innovation : lab",
       desc:
         "<b>Our world-famous, patented and certified process</b> that utilize sequential, qualitative and quantitative research methodologies will identify the most impactful innovation /solution. Guaranteed. <b>We guarantee that the winning innovation will have a minimum 85%</b> deep buy-in from your target – or we continue for free until we reach it!",
       icon: <InnovationIcon/>
@@ -96,7 +96,7 @@ class Process extends Component {
   }
 
   toggleModal(selected) {
-    if (window.innerWidth < 1000){
+    if (window.innerWidth < 1001){
       this.setState({
         modalToggled: true,
         selectedProcess: selected

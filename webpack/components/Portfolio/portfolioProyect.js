@@ -15,6 +15,7 @@ class ProyectPortfolio extends Component {
         className={"resource" + resource.id + (resource.type !== "video" ? " static" : "")}
         onClick={() => this.props.toggleResource(resource)}
         style={{
+          backgroundSize: `${resource.type === "vector"? "contain" : ""}`,
           backgroundImage: `url(assets/img/portfolio/${section.id}/${
             proyect.id
           }/${resource.id}.${resource.type === "vector"? "svg" : "jpg"})`
@@ -32,16 +33,16 @@ class ProyectPortfolio extends Component {
         }
       >
         <a className="close" onClick={() => this.props.closeProyect()} />
-        <a className="next" onClick={() => this.props.nextModal(proyect)} />
+        <a className="next" onClick={() => this.props.nextProyect(proyect)} />
         <a
           className="next prev"
-          onClick={() => this.props.prevModal(proyect)}
+          onClick={() => this.props.prevProyect(proyect)}
         />
         <div className="textArea">
           <h3 dangerouslySetInnerHTML={{ __html: proyect.title }} />
           <p dangerouslySetInnerHTML={{ __html: proyect.text }} />
         </div>
-        <ul className="galleryArea" id={"proyect" + proyect.id}>
+        <ul className="galleryArea" id={"section" + section.id + "proyect" + proyect.id}>
           {resourcesList}
         </ul>
       </div>

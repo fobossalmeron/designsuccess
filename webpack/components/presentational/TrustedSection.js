@@ -33,6 +33,7 @@ class TrustedSection extends Component {
 
     return (
       <section id="trustedby">
+        <h2>trusted by</h2>
         <Quotes />
         <div className="trustedGrid">
           <Modal

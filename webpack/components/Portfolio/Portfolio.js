@@ -13,25 +13,29 @@ class Portfolio extends Component {
       selectedResource: portfolioData.sections[0].proyects[0].resources[0],
       sectionToggled: false,
       proyectToggled: false,
-      resourceToggled: false
+      resourceToggled: false,
+      videoPlaying: false
     };
   }
 
   closeSection() {
     this.setState({
-      sectionToggled: false
+      sectionToggled: false,
+      videoPlaying: false
     });
   }
 
   closeProyect() {
     this.setState({
-      proyectToggled: false
+      proyectToggled: false,
+      videoPlaying: false
     });
   }
 
   closeResource() {
     this.setState({
-      resourceToggled: false
+      resourceToggled: false,
+      videoPlaying: false
     });
   }
 
@@ -43,7 +47,9 @@ class Portfolio extends Component {
       var nextsectionName = portfolioData.sections[index + 1];
     }
     this.setState({
-      selectedSection: nextsectionName
+      selectedSection: nextsectionName,
+      videoPlaying: false,
+      resourceToggled: false
     });
   }
 
@@ -56,7 +62,39 @@ class Portfolio extends Component {
       var nextsectionName = portfolioData.sections[index - 1];
     }
     this.setState({
-      selectedSection: nextsectionName
+      selectedSection: nextsectionName,
+      videoPlaying: false,
+      resourceToggled: false
+    });
+  }
+
+  nextProyect(selectedProyect) {
+    var indexOfSelectedSection = portfolioData.sections.indexOf(this.state.selectedSection);
+    var index = portfolioData.sections[indexOfSelectedSection].proyects.indexOf(selectedProyect);
+    if (index + 2 > portfolioData.sections[indexOfSelectedSection].proyects.length) {
+      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[0];
+    } else {
+      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[index + 1];
+    }
+    this.setState({
+      selectedProyect: nextproyectName,
+      videoPlaying: false,
+      resourceToggled: false
+    });
+  }
+
+  prevProyect(selectedProyect) {
+    var indexOfSelectedSection = portfolioData.sections.indexOf(this.state.selectedSection);
+    var index = portfolioData.sections[indexOfSelectedSection].proyects.indexOf(selectedProyect);
+    if (index - 1 < 0) {
+      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[portfolioData.sections[indexOfSelectedSection].proyects.length - 1];
+    } else {
+      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[index - 1];
+    }
+    this.setState({
+      selectedProyect: nextproyectName,
+      videoPlaying: false,
+      resourceToggled: false
     });
   }
 
@@ -65,7 +103,8 @@ class Portfolio extends Component {
       sectionToggled: true,
       proyectToggled: false,
       resourceToggled: false,
-      selectedSection: section
+      selectedSection: section,
+      videoPlaying: false
     });
   }
 
@@ -74,20 +113,32 @@ class Portfolio extends Component {
       sectionToggled: true,
       proyectToggled: true,
       resourceToggled: false,
-      selectedProyect: proyect
+      selectedProyect: proyect,
+      videoPlaying: false
     });
   }
+
   toggleResource(resource) {
-    console.log("resource Toggled");
-    if (window.innerWidth > 1000 && resource.type === "image") {
-      console.log("resource was image and the browser is above 1000px");
+    console.log("resource toggled");
+    if (window.innerWidth > 1000 && (resource.type === "image" || resource.type === "vector")){
+      console.log("resource was image or vector and the browser is above 1000px");
       return;
-    } else {
+    } else if (resource.type === "video"){
       this.setState({
         sectionToggled: true,
         proyectToggled: true,
         resourceToggled: true,
-        selectedResource: resource
+        selectedResource: resource,
+        videoPlaying: true
+      });
+    }
+      else {
+      this.setState({
+        sectionToggled: true,
+        proyectToggled: true,
+        resourceToggled: true,
+        selectedResource: resource,
+        videoPlaying: false
       });
     }
   }
@@ -133,6 +184,8 @@ class Portfolio extends Component {
         proyect={this.state.selectedProyect}
         closeProyect={this.closeProyect.bind(this)}
         toggleResource={this.toggleResource.bind(this)}
+        prevProyect={this.prevProyect.bind(this)}
+        nextProyect={this.nextProyect.bind(this)}
       />
     );
     var resourceModal = (
@@ -144,6 +197,7 @@ class Portfolio extends Component {
         resource={this.state.selectedResource}
         toggleResource={this.toggleResource.bind(this)}
         closeResource={this.closeResource.bind(this)}
+        videoPlaying={this.state.videoPlaying}
       />
     );
 

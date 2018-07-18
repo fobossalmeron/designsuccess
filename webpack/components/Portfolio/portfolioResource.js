@@ -24,7 +24,7 @@ class ResourcePortfolio extends Component {
     );
 
     var videoResource = (
-      <ReactPlayer className="videoResource" url={resource.url} />
+      <ReactPlayer className="videoResource" url={resource.url} playing={this.props.videoPlaying}/>
     );
 
     var resourceRender = resource.type === "video"? videoResource : imageResource;
