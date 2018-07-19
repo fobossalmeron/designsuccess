@@ -121,6 +121,7 @@ class Microsites extends Component {
         <p dangerouslySetInnerHTML={{ __html: microsite.desc }} />
         <a href={microsite.link}>
           <div className={"launchIcon launch" + microsite.id}>
+            <span>click to launch</span>
             <LaunchIcon />
           </div>
         </a>
@@ -132,7 +133,7 @@ class Microsites extends Component {
         id={"micrositeBack" + microsite.id}
         key={"micrositeBack" + microsite.id}
         style={{
-          backgroundImage: `url(../../assets/img/microsites/${microsite.image})`
+          backgroundImage: `url(assets/img/microsites/${microsite.image})`
         }}
       />
     ));

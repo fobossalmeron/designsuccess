@@ -283,24 +283,32 @@ h2 {
     }
     .launchIcon {
         border: 1px solid white;
-        width: auto;
-        padding: 5px;
-        transition: .2s linear all;
+        width: 45px;
+        transition: .3s ease all;
         display: flex;
         flex-direction: row;
         font-size: 1.5rem;
-        line-height: .3;
         height: 42px;
-        &:before {
-            color: white;
-            text-decoration: none;
-            transition: .3s ease-in all;
-            display: none;
-            content: '';
+        transform: translateZ(0.00001px);
+        backface-visibility: hidden;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        span {
+            transform: scale(0);
+            opacity: 0;
+            transition: .2s ease all;
+            color:white;
+            position: absolute;
         }
         svg {
             height: 30px;
             width: 30px;
+            transform: scale(1);
+            opacity: 1;
+            transition: .3s ease all;
+            position: absolute;
             & * {
                 fill: none;
                 stroke-linecap: round;
@@ -335,7 +343,9 @@ h2 {
             padding: 10% 5% 5% 10%;
             grid-template-rows: 1.3fr 2fr 80px;
             list-style: none;
-            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-width: 0 1px;
+            margin-left: -1px;
             &:nth-child(7) {
                 border: 0px solid rgba(255, 255, 255, 0.5);
             }
@@ -368,13 +378,15 @@ h2 {
                     min-width: 0;
                 }
                 .launchIcon {
-                    padding: 8% 10%;
+                    width: 110px;
                     svg {
-                        display: none;
+                        opacity: 0;
+                        transform: scale(0);
                     }
-                    &::before {
-                        content: 'click to launch';
-                        display: flex;
+                    span {
+                        opacity: 1;
+                        transform: scale(1);
+                        transition: 300ms .2s ease all;
                     }
                 }
                 p {
@@ -428,8 +440,9 @@ h2 {
                     animation: dash 5s linear infinite forwards;
                     stroke-linecap: round;
                     stroke-width: 3;
-                    stroke: url(#GradientISO);
                     transition: .3s ease all;
+                    stroke: gray;
+                    animation-play-state: paused;
                 }
                 #back {
                     display: none;
@@ -494,11 +507,17 @@ h2 {
             p {
                 opacity: 1;
             }
-            svg #back {
-                display: block;
-            }
-            svg #first {
-                display: none;
+            svg {
+                * {
+                    stroke: url(#GradientISO);
+                    animation-play-state: running;
+                }
+                #back {
+                    display: block;
+                }
+                #first {
+                    display: none;
+                }
             }
         }
     }
@@ -844,7 +863,8 @@ h2 {
                 .sectionIcon {
                     svg {
                         & * {
-                            stroke: url("#GradientWhat");
+                            stroke: url("#GradientWHAT");
+                            animation-play-state: running;
                         }
                     }
                 }
@@ -866,16 +886,18 @@ h2 {
                 transition: .6s ease all;
                 svg {
                     max-width: 100%;
-                    transition: .3s ease all;
+                    transition: 1s ease all;
                     & * {
                         fill: none;
-                        stroke-dasharray: .5 12;
+                        stroke-dasharray: .1 12;
                         stroke-dashoffset: 50;
-                        animation: dash 5s linear infinite forwards;
                         stroke-linecap: round;
-                        stroke-width: 2.5;
+                        stroke-width: 3px;
                         transition: .3s ease all;
                         stroke: #666666;
+                        animation: dash 5s ease-in-out infinite alternate;
+                        animation-play-state: paused;
+                        transition: 1s ease all;
                     }
                 }
             }

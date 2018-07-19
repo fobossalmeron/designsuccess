@@ -21,7 +21,7 @@ class TrustedSection extends Component {
   }
   render() {
     var ClientBoxList = clientData.clientBoxes.map((box, index) => (
-      <div className="logoRoller" key={"box" + box.id}>
+      <div className="logoRoller" id={"logoRoller" + index} key={"box" + box.id}>
         {box.clients.map((client, index) => (
           <span key={"client" + index}>
             {client.icon}

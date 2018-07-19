@@ -109,11 +109,6 @@
                 display: flex;
                 border: none;
                 justify-content: space-between;
-                &:hover {
-                    .launchIcon {
-                        padding: 5px;
-                    }
-                }
                 h3 {
                     padding: 0;
                     margin: 0;
@@ -131,16 +126,13 @@
                 }
                 .launchIcon {
                     font-size: 1.5rem;
-                    height: auto;
-                    width: 110px;
+                    width: 100px;
                     svg {
                         display: none;
                     }
-                    &:before {
-                        content: 'click to launch';
-                        display: flex;
-                        padding: 5%;
-                        width: 110px;
+                    span{
+                        opacity:1;
+                        transform: scale(1);
                     }
                 }
             }
@@ -163,8 +155,15 @@
             &.sectionToggled h3 {
                 opacity: 0 !important;
             }
-            .section .sectionIcon svg * {
-                stroke: url(#GradientWhat);
+            .section .sectionIcon{
+                top: 50px;
+                svg * {
+                    stroke: url(#GradientWHAT);
+                    animation-play-state: running;
+                    stroke-width: 4;
+                    stroke-dasharray: .5 17;
+                    stroke-dashoffset: 100;
+                }
             }
         }
         .sectionModal {
@@ -292,15 +291,15 @@
             }
         }
         .close {
-            right: 45px;
+            right: 4%;
         }
         .next {
-            right: 60px;
+            right: 4%;
             top: 130px;
             opacity: 0.5;
         }
         .prev {
-            left: 60px;
+            left: 4%;
         }
         .process {
             grid-template-areas: "title";
@@ -320,6 +319,10 @@
             }
             .processIcon{
                 transform: translateY(-20%);
+                svg *{
+                    animation-play-state: running;
+                    stroke: url(#GradientISO);
+                }
             }
         }
         .processModal {
@@ -328,6 +331,10 @@
             }
             .processIcon {
                 transform: translateY(-25%);
+                svg *{
+                    animation-play-state: running;
+                    stroke: url(#GradientISO);
+                }
             }
         }
         p {
@@ -487,9 +494,6 @@
                 }
             }
         }
-    }
-    .sectionContainer .sectionList .section .sectionIcon {
-        top: 80px;
     }
 }
 
@@ -670,22 +674,42 @@
     .sectionContainer .sectionList .section .sectionIcon {
         top: 65px;
     }
+    #trustedby .firstColumned {
+        min-height: 180px;
+    }
 }
 
 @include media-query(600px) {
+    .processContainer .process{
+        .processIcon {
+            transform: translateY(-50%);
+            max-height: 260px;
+        }
+    } 
     #home h1 {
         font-size: 4.3rem;
     }
     #contact {
         h2 {
-            font-size: 7.5rem;
+            font-size: 6.5rem;
         }
+        .form{
+            input, textarea {
+                font-size: 1.3rem;
+            }
+        } 
     }
 }
 
 @include media-query(500px) {
-    .processContainer .process h3{
-        hyphens: auto;
+    .processContainer .process{
+         .processIcon {
+            transform: translateY(-50%);
+            max-height: 210px;
+        }
+        h3{
+            hyphens: auto;
+        }
     }
     #home h1 {
         font-size: 3.4rem;
@@ -693,6 +717,12 @@
 }
 
 @include media-query(400px) {
+    .processContainer .process{
+        .processIcon {
+           transform: translateY(-50%);
+           max-height: 185px;
+       }
+   }
     #home h1 {
         font-size: 3.4rem;
     }

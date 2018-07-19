@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 470 380" style="enable-background:new 0 0 470 380;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#666666;stroke-width:2;stroke-miterlimit:10;}
-</style>
+	<linearGradient id="GradientWHAT" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+		<stop  offset="0" style="stop-color:#22233F"/>
+		<stop  offset="0.5" style="stop-color:#87E8F7"/>
+		<stop  offset="1" style="stop-color:#22233F"/>
+	</linearGradient>
 <circle class="st0" cx="240.3" cy="178.8" r="132.9"/>
 <ellipse class="st0" cx="397.1" cy="125.2" rx="67.3" ry="67.3"/>
 <ellipse class="st0" cx="73.3" cy="165.3" rx="67.3" ry="67.3"/>
