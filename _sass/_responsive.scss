@@ -130,8 +130,8 @@
                     svg {
                         display: none;
                     }
-                    span{
-                        opacity:1;
+                    span {
+                        opacity: 1;
                         transform: scale(1);
                     }
                 }
@@ -150,12 +150,44 @@
 }
 
 @include media-query(1000px) {
+    .overVideo {
+        .screen {
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            padding: 15% 10% 15% 4%;
+        }
+        .firstGrid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            p {
+                max-width: 360px;
+            }
+        }
+        .secondGrid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr .7fr 1fr;
+            p {
+                max-width: 360px;
+            }
+        }
+        .thirdGrid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            p {
+                max-width: 400px;
+            }
+        }
+        h1 span {
+            margin-left: 0;
+        }
+    }
     .sectionContainer {
         .sectionList {
             &.sectionToggled h3 {
                 opacity: 0 !important;
             }
-            .section .sectionIcon{
+            .section .sectionIcon {
                 top: 50px;
                 svg * {
                     stroke: url(#GradientWHAT);
@@ -276,16 +308,11 @@
             }
         }
     }
-    #home {
-        h1 {
-            font-size: 7.8rem;
-        }
-    }
     h2 {
         padding-left: 4%;
     }
     .processContainer {
-        .processList{
+        .processList {
             &.hideMe {
                 max-height: 500px;
             }
@@ -305,21 +332,21 @@
             grid-template-areas: "title";
             grid-template-rows: 1fr;
             max-height: 340px;
-            &:hover svg{
-                #back{
-                    display:none;
+            &:hover svg {
+                #back {
+                    display: none;
                 }
-                #first{
-                    display:block;
-                    opacity:1;
+                #first {
+                    display: block;
+                    opacity: 1;
                 }
-            } 
+            }
             h3 {
                 margin-top: 0;
             }
-            .processIcon{
+            .processIcon {
                 transform: translateY(-20%);
-                svg *{
+                svg * {
                     animation-play-state: running;
                     stroke: url(#GradientISO);
                 }
@@ -331,7 +358,7 @@
             }
             .processIcon {
                 transform: translateY(-25%);
-                svg *{
+                svg * {
                     animation-play-state: running;
                     stroke: url(#GradientISO);
                 }
@@ -439,6 +466,7 @@
         }
     }
     #contact {
+        overflow: hidden;
         padding: 10% 5% 0 5%;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "logo logo" "h2 h2" "locations locations" "form form" "locations2 locations2" "footer footer";
@@ -498,9 +526,6 @@
 }
 
 @include media-query(900px) {
-    #home h1 {
-        font-size: 6.9rem;
-    }
     .sectionContainer {
         padding: 0 5%;
         .sectionList {
@@ -512,12 +537,12 @@
             }
         }
     }
+    .processContainer .process .processIcon {
+        transform: translateY(-10%);
+    }
 }
 
 @include media-query(800px) {
-    #home h1 {
-        font-size: 6.0rem;
-    }
     .screen7 .inMenu {
         display: flex;
         flex-direction: column;
@@ -637,6 +662,9 @@
             }
         }
     }
+    .processContainer .process .processIcon {
+        transform: translateY(-5%);
+    }
 }
 
 @include media-query(700px) {
@@ -647,13 +675,13 @@
         .processList {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
-                &.hideMe {
-                    max-height: 70vh;
-                }
+            &.hideMe {
+                max-height: 70vh;
+            }
         }
-    }
-    #home h1 {
-        font-size: 5.2rem;
+        .process .processIcon {
+            transform: translateY(-20%);
+        }
     }
     .screen2 ul {
         flex-direction: column;
@@ -680,50 +708,110 @@
 }
 
 @include media-query(600px) {
-    .processContainer .process{
+    #home .swiper-pagination {
+        right: 4%;
+    }
+    .processContainer .process {
         .processIcon {
             transform: translateY(-50%);
             max-height: 260px;
         }
-    } 
-    #home h1 {
-        font-size: 4.3rem;
     }
     #contact {
         h2 {
             font-size: 6.5rem;
         }
-        .form{
-            input, textarea {
+        .form {
+            input,
+            textarea {
                 font-size: 1.3rem;
             }
-        } 
+        }
+    }
+    #how {
+        .processContainer h4 {
+            display: none;
+        }
+        #outOfGrid {
+            display: block;
+        }
+        .video {
+            margin: 0;
+            width: 100% !important;
+            padding-bottom: 56.6%;
+        }
     }
 }
 
 @include media-query(500px) {
-    .processContainer .process{
-         .processIcon {
-            transform: translateY(-50%);
-            max-height: 210px;
+    .processContainer {
+        .processModal p {
+            font-size: 1.8rem;
         }
-        h3{
-            hyphens: auto;
+        .processList.hideMe {
+            max-height: 90vh;
+        }
+        .process {
+            .processIcon {
+                transform: translateY(-50%);
+                max-height: 210px;
+            }
+            h3 {
+                hyphens: auto;
+            }
         }
     }
-    #home h1 {
-        font-size: 3.4rem;
+    #home {
+        .screen {
+            justify-items: flex-start;
+            padding: 35% 10% 35% 4%;
+            grid-gap: 0;
+        }
+        .secondGrid h1 {
+            display: none;
+        }
+        .thirdGrid {
+            grid-template-rows: 1fr;
+        }
+        .swiper-pagination {
+            right: 4%;
+            top: 280px;
+        }
+        h1 {
+            font-size: 5rem;
+        }
+        h2 {
+            display: none;
+        }
+        ul {
+            margin-left: 25px;
+        }
+    }
+    #contact .locationContact~.locationContact p {
+        font-size: 1.5rem;
+    }
+    .sectionContainer {
+        .sectionList {
+            grid-column-gap: 2rem;
+            .section h3 {
+                font-size: 2rem;
+                hyphens: auto;
+            }
+        }
+        .sectionModal {
+            padding-top: 30px;
+        }
     }
 }
 
 @include media-query(400px) {
-    .processContainer .process{
+    .processContainer .process {
         .processIcon {
-           transform: translateY(-50%);
-           max-height: 185px;
-       }
-   }
-    #home h1 {
-        font-size: 3.4rem;
+            transform: translateY(-50%);
+            max-height: 185px;
+        }
+    }
+    #contact h2 {
+        font-size: 5rem;
     }
 }

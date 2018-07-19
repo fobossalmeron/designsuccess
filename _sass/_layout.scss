@@ -93,15 +93,18 @@ section {
         text-align: left;
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
+        margin-bottom: 0;
         span {
             margin-left: 21%;
         }
     }
     h2 {
         padding-left: 0;
+        margin-bottom: 0;
     }
     p {
         font-size: 2.6rem;
+        margin-bottom: 0;
     }
     ul {
         font-size: 2.2rem;
@@ -117,10 +120,16 @@ section {
     .firstGrid {
         grid-template-columns: 1fr 1fr .8fr;
         padding: 0 10% 0 16%;
+        p {
+            max-width: 300px;
+        }
     }
     .secondGrid {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0 10% 0 16%;
+        p{
+            max-width: 280px;
+        }
     }
     .thirdGrid {
         grid-template-columns: 1fr 1fr;
@@ -233,6 +242,9 @@ h2 {
     h2 {
         margin-top: 5%;
     }
+    #outOfGrid{
+        display:none;
+    }
     .processContainer h4 {
         padding-left: 0;
     }
@@ -299,7 +311,7 @@ h2 {
             transform: scale(0);
             opacity: 0;
             transition: .2s ease all;
-            color:white;
+            color: white;
             position: absolute;
         }
         svg {

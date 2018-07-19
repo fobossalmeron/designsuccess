@@ -56,11 +56,11 @@ class WhoSection extends Component {
                   <span>possible</span>
                 </h1>
                 <p>
-                  we are a global team that<br />
-                  innovate, impact and (re)-<br />
-                  invent iconic brands, their<br />
-                  products, services and<br />
-                  experiences from a-to-z.<br />
+                  we are a global team that
+                  innovate, impact and (re)-
+                  invent iconic brands, their
+                  products, services and
+                  experiences from a-to-z.
                   <br />we, <b>design success</b>.
                 </p>
               </div>
@@ -74,8 +74,8 @@ class WhoSection extends Component {
                 </h1>
                 <p>
                   <b>
-                    our patented, certified<br />
-                    and validated innovation<br />
+                    our patented, certified
+                    and validated innovation
                     process is used to:
                   </b>
                 </p>
