@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ContactForm from "./../ContactForm";
 import DesignSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../../assets/img/layout/designSuccess.svg";
-import LocationMap from "svg-react-loader?name=LocationMap!../../../assets/img/layout/locationMap2.svg";
+import LocationMap from "svg-react-loader?name=LocationMap!../../../assets/img/layout/locationMap.svg";
 import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../../assets/img/social/instagram.svg";
 import FacebookIcon from "svg-react-loader?name=FacebookIcon!../../../assets/img/social/facebook.svg";
 import VimeoIcon from "svg-react-loader?name=VimeoIcon!../../../assets/img/social/vimeo.svg";
