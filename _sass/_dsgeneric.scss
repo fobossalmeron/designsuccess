@@ -39,12 +39,15 @@ header {
         ul {
             display: flex;
             width: 100%;
-            max-width: 270px;
+            max-width: 290px;
             li {
                 list-style: none;
                 list-style-type: none;
-                a.active {
-                    font-weight: 600;
+                a{
+                    font-size: 1.6rem;
+                    &.active{
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -139,7 +142,6 @@ section {
     width: 100%;
     max-width: 1150px;
     margin: 0 auto;
-    min-height: 100vh;
     padding: 3%;
     box-sizing: border-box;
 }
@@ -862,6 +864,7 @@ svg {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: .3s ease all;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
-import ReactPlayer from "react-player";
 import WhoSection from "./presentational/WhoSection";
 import WhatSection from "./presentational/WhatSection";
 import HowSection from "./presentational/HowSection";
@@ -15,7 +14,7 @@ class App extends Component {
     this.state = {
       menuOn: false,
       modalOpen: false,
-      maintenance: true
+      maintenance: false
     };
     this.quitMaintenance = this.quitMaintenance.bind(this);
     this.initScrollMagic = this.initScrollMagic.bind(this);
@@ -62,12 +61,14 @@ class App extends Component {
         <UnderConstructionIcon />
         <div id="homevideo">
           <div className="video_overlay" />
-          <ReactPlayer
-            url="assets/video/intro.mp4"
+          <video
+            src="assets/video/intro.mp4"
+            preload="auto"
+            autoPlay
+            muted
             playing
             loop
-            muted
-            playsinline
+            playsInline
           />
         </div>
         <button onClick={this.quitMaintenance}>quit</button>

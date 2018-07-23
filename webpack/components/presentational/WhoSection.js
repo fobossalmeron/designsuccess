@@ -1,19 +1,8 @@
 import React, { Component } from "react";
-import ReactPlayer from "react-player";
 import Swiper from "react-id-swiper";
 import DesignSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/designSuccess.svg";
 
 class WhoSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playing: false
-    };
-  } 
-
-  componentDidMount() {
-    this.setState({ playing: true });
-  }
 
   render() {
     const params = {
@@ -29,7 +18,7 @@ class WhoSection extends Component {
       },
       mousewheel: {
         releaseOnEdges: true,
-        sensitivity: 0,
+        sensitivity: 0
       },
       pagination: {
         el: ".swiper-pagination",
@@ -42,6 +31,7 @@ class WhoSection extends Component {
           <Swiper {...params}>
             <div>
               <div className="screen firstGrid">
+                <DesignSuccess className="animLogo" />
                 <h1>
                   making<br />impossible<br />
                   <span>possible</span>
@@ -50,17 +40,16 @@ class WhoSection extends Component {
             </div>
 
             <div>
-              <div className="screen firstGrid">
+              <div className="screen firstGrid secondFirstGrid">
+                <DesignSuccess className="animLogo" />
                 <h1>
                   making<br />impossible<br />
                   <span>possible</span>
                 </h1>
                 <p>
-                  we are a global team that
-                  innovate, impact and (re)-
-                  invent iconic brands, their
-                  products, services and
-                  experiences from a-to-z.
+                  we are a global team that innovate, impact and (re)- invent
+                  iconic brands, their products, services and experiences from
+                  a-to-z.
                   <br />we, <b>design success</b>.
                 </p>
               </div>
@@ -68,15 +57,16 @@ class WhoSection extends Component {
 
             <div>
               <div className="screen secondGrid">
+                <DesignSuccess className="animLogo" />
+
                 <h1>
                   making<br />impossible<br />
                   <span>possible</span>
                 </h1>
                 <p>
                   <b>
-                    our patented, certified
-                    and validated innovation
-                    process is used to:
+                    our patented, certified and validated innovation process is
+                    used to:
                   </b>
                 </p>
                 <ul>
@@ -92,6 +82,8 @@ class WhoSection extends Component {
 
             <div>
               <div className="screen thirdGrid">
+                <DesignSuccess className="animLogo" />
+
                 <h2>
                   best of the<br />best minds<br />& skills
                 </h2>
@@ -118,12 +110,14 @@ class WhoSection extends Component {
         </div>
         <div id="homevideo">
           <div className="video_overlay" />
-          <ReactPlayer
-            url="assets/video/intro.mp4"
-            playing={this.state.playing}
-            loop={true}
-            muted={true}
-            playsinline={true}
+          <video
+            src="assets/video/intro.mp4"
+            preload="auto"
+            autoPlay
+            muted
+            playing
+            loop
+            playsInline
           />
         </div>
       </section>

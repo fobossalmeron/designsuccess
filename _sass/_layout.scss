@@ -13,6 +13,10 @@
 
 header {
     background-color: transparent;
+    .designSuccessLogo {
+        opacity: 0;
+        transition: .3s ease all;
+    }
     .headerWrapper {
         padding: 15px 0 8px 0;
         display: grid;
@@ -20,6 +24,9 @@ header {
     }
     &.headerScroll {
         background-color: black;
+        .designSuccessLogo {
+            opacity: 1;
+        }
     }
 }
 
@@ -120,14 +127,43 @@ section {
     .firstGrid {
         grid-template-columns: 1fr 1fr .8fr;
         padding: 0 10% 0 16%;
+        .animLogo {
+            position: absolute;
+            width: 400px;
+            margin-left: 16.6%;
+            top: 20%;
+            & * {
+                fill: white;
+            }
+        }
         p {
             max-width: 300px;
+        }
+    }
+    .secondFirstGrid {
+        .animLogo {
+            position: fixed;
+            width: 150px;
+            margin-left: 15.9%;
+            top: 19px;
+            & * {
+                fill: white;
+            }
+        }
+    }
+    .animLogo {
+        position: fixed;
+        width: 150px;
+        margin-left: 15.9%;
+        top: 19px;
+        & * {
+            fill: white;
         }
     }
     .secondGrid {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0 10% 0 16%;
-        p{
+        p {
             max-width: 280px;
         }
     }
@@ -217,17 +253,22 @@ h2 {
 
 .screen1 {
     max-width: $max-body-width;
+    min-height: 0;
+    padding: 6% 0 0 0;
 }
 
 .screen2 {
     display: flex;
     flex-direction: column;
+    margin: 5% 0;
+    min-height: 0;
     h2 {
         margin: 5% 0 1.5% 0;
     }
 }
 
 #trustedby {
+    padding: 2% 3% 8% 3%;
     h2 {
         display: none;
     }
@@ -242,8 +283,8 @@ h2 {
     h2 {
         margin-top: 5%;
     }
-    #outOfGrid{
-        display:none;
+    #outOfGrid {
+        display: none;
     }
     .processContainer h4 {
         padding-left: 0;
@@ -280,6 +321,14 @@ h2 {
         position: absolute;
         width: 100%;
         opacity: 0.7;
+        #micrositeBack5,
+        #micrositeBack6 {
+            background-position: 50% 50%;
+            margin-top: -15%;
+        }
+        #micrositeBack3 {
+            background-position: 50% 50%;
+        }
         .backgroundContainer {
             position: relative;
             flex-grow: 1;
@@ -1194,9 +1243,7 @@ h2 {
     }
 }
 
-
-
-.loading{
+.loading {
     padding: 4%;
     position: absolute;
     top: 0;
@@ -1204,14 +1251,14 @@ h2 {
     right: 0;
     bottom: 0;
     min-height: 100vh;
-    svg{
+    svg {
         max-width: 500px;
         z-index: 1;
     }
-    #homevideo{
+    #homevideo {
         z-index: -1;
     }
-    button{
+    button {
         background-color: black;
         position: absolute;
         bottom: 0;
@@ -1219,7 +1266,7 @@ h2 {
         width: 100px;
         border: 0;
         height: 101px;
-        &:active{
+        &:active {
             outline: none;
         }
     }
