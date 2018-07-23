@@ -1193,3 +1193,30 @@ h2 {
         grid-column-end: span 4;
     }
 }
+
+
+
+.loading{
+    padding: 4%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    svg{
+        max-width: 500px;
+    }
+    button{
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        border: 0;
+        height: 100px;
+        &:active{
+            outline: none;
+        }
+    }
+}

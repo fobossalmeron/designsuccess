@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       menuOn: false,
       modalOpen: false,
-      maintenance: false
+      maintenance: true
     };
     this.quitMaintenance = this.quitMaintenance.bind(this);
     this.initScrollMagic = this.initScrollMagic.bind(this);
@@ -59,36 +59,7 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-        <div id="loadingvideo">
           <UnderConstructionIcon />
-        </div>
-        <div className="aboveVideo">
-          <img src="assets/img/layout/logo.svg" />
-          <img src="assets/img/layout/type.svg" />
-          <div className="secondLanding">
-            <h2 className="blue">we're</h2>
-            <h2 className="yellow">redesigning</h2>
-            <h2 className="pink">ourselves</h2>
-          </div>
-          <div className="follow">
-            <p>
-              follow us on
-              <a
-                href={"https://www.instagram.com/more.than.spaces/"}
-                target="_blank"
-              >
-                <InstagramIcon />
-              </a>
-            </p>
-            <p>
-              <a href="http://instagram.com/more.than.spaces/">
-                @<span className="blue">more</span>.<span className="yellow">
-                  than
-                </span>.<span className="pink">spaces</span>
-              </a>
-            </p>
-          </div>
-        </div>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     );
