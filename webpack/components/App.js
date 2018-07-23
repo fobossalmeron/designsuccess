@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
+import ReactPlayer from "react-player";
 import WhoSection from "./presentational/WhoSection";
 import WhatSection from "./presentational/WhatSection";
 import HowSection from "./presentational/HowSection";
 import TrustedSection from "./presentational/TrustedSection";
 import EngageSection from "./presentational/EngageSection";
 import scrollToComponent from "react-scroll-to-component";
-import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../assets/img/social/instagram.svg";
 import UnderConstructionIcon from "svg-react-loader?name=UnderConstruction!../../assets/img/underconstruction.svg";
 
 class App extends Component {
@@ -59,7 +59,17 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-          <UnderConstructionIcon />
+        <UnderConstructionIcon />
+        <div id="homevideo">
+          <div className="video_overlay" />
+          <ReactPlayer
+            url="assets/video/intro.mp4"
+            playing
+            loop
+            muted
+            playsinline
+          />
+        </div>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     );

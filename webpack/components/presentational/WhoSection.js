@@ -9,7 +9,7 @@ class WhoSection extends Component {
     this.state = {
       playing: false
     };
-  }
+  } 
 
   componentDidMount() {
     this.setState({ playing: true });
