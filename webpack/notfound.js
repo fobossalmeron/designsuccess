@@ -17,9 +17,6 @@ class NotFound extends Component {
   hideNav(){
     this.setState({ menuOn: false});
   }
-  componentDidMount() {
-    this.loadDiscount(this);
-  }
 
   render() {
     return (
@@ -27,7 +24,8 @@ class NotFound extends Component {
         <Nav relativePath="/"
              toggleMenu={this.toggleMenu.bind(this)}
              hideNav={this.hideNav.bind(this)}
-             menuOn={this.state.menuOn}  />
+             menuOn={this.state.menuOn} 
+             />
         <EngageSection/>
       </div>
     );

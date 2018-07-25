@@ -93,17 +93,9 @@ section {
     overflow: hidden;
     h1,
     h2 {
-        font-family: $secondary-font-family;
-        font-weight: 600;
-        font-size: 8rem;
-        line-height: 1;
-        text-align: left;
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
         margin-bottom: 0;
-        span {
-            margin-left: 21%;
-        }
     }
     h2 {
         padding-left: 0;
@@ -125,13 +117,17 @@ section {
         height: 100vh
     }
     .firstGrid {
-        grid-template-columns: 1fr 1fr .8fr;
+        grid-template-columns: 1fr 1fr .5fr;
         padding: 0 10% 0 16%;
+        position: relative;
+        column-gap: 10rem;
         .animLogo {
+            grid-column: 1 / span 1;
+            grid-row: 1 /span 1;
+            margin: 0;
+            top: -55%;
             position: absolute;
-            width: 400px;
-            margin-left: 16.6%;
-            top: 20%;
+            width: 100%;
             & * {
                 fill: white;
             }
@@ -141,11 +137,13 @@ section {
         }
     }
     .secondFirstGrid {
+        position: relative;
         .animLogo {
             position: fixed;
             width: 150px;
-            margin-left: 15.9%;
+            grid-column: 1 / span 1;
             top: 19px;
+            margin-left: 16.6%;
             & * {
                 fill: white;
             }
@@ -154,23 +152,28 @@ section {
     .animLogo {
         position: fixed;
         width: 150px;
-        margin-left: 15.9%;
+        grid-column: 1 / span 1;
         top: 19px;
+        margin-left: 16.6%;
         & * {
             fill: white;
         }
     }
     .secondGrid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr .84fr 1.1fr;
         padding: 0 10% 0 16%;
         p {
             max-width: 280px;
+            justify-self: center;
         }
     }
     .thirdGrid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: .6fr 1fr;
         padding-left: 16%;
         grid-gap: 10rem;
+        svg{
+            max-width: 400px;
+        }
     }
 }
 
@@ -268,7 +271,7 @@ h2 {
 }
 
 #trustedby {
-    padding: 2% 3% 8% 3%;
+    padding: 2% 3% 11% 3%;
     h2 {
         display: none;
     }
@@ -350,12 +353,13 @@ h2 {
         flex-direction: row;
         font-size: 1.5rem;
         height: 42px;
-        transform: translateZ(0.00001px);
         backface-visibility: hidden;
-        align-content: center;
         align-items: center;
         justify-content: center;
-        justify-items: center;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateZ(0.0001px);
         span {
             transform: scale(0);
             opacity: 0;
@@ -402,11 +406,12 @@ h2 {
             text-align: left;
             flex-direction: column;
             padding: 10% 5% 5% 10%;
-            grid-template-rows: 1.3fr 2fr 80px;
+            grid-template-rows: 1.3fr 2fr .5fr;
             list-style: none;
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-width: 0 1px;
             margin-left: -1px;
+            position: relative;
             &:nth-child(7) {
                 border: 0px solid rgba(255, 255, 255, 0.5);
             }
@@ -941,8 +946,6 @@ h2 {
             .sectionIcon {
                 position: absolute;
                 width: 100%;
-                top: 0;
-                left: 0;
                 z-index: -1;
                 transition: .6s ease all;
                 svg {

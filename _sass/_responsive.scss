@@ -7,9 +7,6 @@
 
 @include media-query(1400px) {
     .sectionContainer {
-        .sectionList .section .sectionIcon {
-            top: 40px;
-        }
         .sectionModal .galleryArea li h5 {
             hyphens: auto;
             font-size: 3rem;
@@ -156,6 +153,9 @@
             justify-content: center;
             justify-items: center;
             padding: 15% 10% 15% 4%;
+            .animLogo{
+                display:none;
+            }
         }
         .firstGrid {
             grid-template-columns: 1fr;
@@ -188,7 +188,6 @@
                 opacity: 0 !important;
             }
             .section .sectionIcon {
-                top: 50px;
                 svg * {
                     stroke: url(#GradientWHAT);
                     animation-play-state: running;
@@ -532,9 +531,6 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
             grid-column-gap: 4rem;
-            .section .sectionIcon {
-                top: 20px;
-            }
         }
     }
     .processContainer .process .processIcon {
@@ -698,9 +694,6 @@
                 grid-row-end: span 1;
             }
         }
-    }
-    .sectionContainer .sectionList .section .sectionIcon {
-        top: 65px;
     }
     #trustedby .firstColumned {
         min-height: 180px;

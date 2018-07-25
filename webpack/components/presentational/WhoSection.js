@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Swiper from "react-id-swiper";
 import DesignSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/designSuccess.svg";
+import MakingImpossible from "svg-react-loader?name=MakingImpossible!../../../assets/img/layout/makingImpossible.svg";
+import BestOf from "svg-react-loader?name=BestOf!../../../assets/img/layout/bestOf.svg";
 
 class WhoSection extends Component {
-
   render() {
     const params = {
       direction: "vertical",
@@ -33,8 +34,7 @@ class WhoSection extends Component {
               <div className="screen firstGrid">
                 <DesignSuccess className="animLogo" />
                 <h1>
-                  making<br />impossible<br />
-                  <span>possible</span>
+                  <MakingImpossible />
                 </h1>
               </div>
             </div>
@@ -43,8 +43,7 @@ class WhoSection extends Component {
               <div className="screen firstGrid secondFirstGrid">
                 <DesignSuccess className="animLogo" />
                 <h1>
-                  making<br />impossible<br />
-                  <span>possible</span>
+                  <MakingImpossible />
                 </h1>
                 <p>
                   we are a global team that innovate, impact and (re)- invent
@@ -58,10 +57,8 @@ class WhoSection extends Component {
             <div>
               <div className="screen secondGrid">
                 <DesignSuccess className="animLogo" />
-
                 <h1>
-                  making<br />impossible<br />
-                  <span>possible</span>
+                  <MakingImpossible />
                 </h1>
                 <p>
                   <b>
@@ -83,9 +80,8 @@ class WhoSection extends Component {
             <div>
               <div className="screen thirdGrid">
                 <DesignSuccess className="animLogo" />
-
                 <h2>
-                  best of the<br />best minds<br />& skills
+                  <BestOf />
                 </h2>
                 <div>
                   <p>

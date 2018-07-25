@@ -9,7 +9,7 @@ const micrositesData = {
       desc:
         "Our founders, Kim Norland’s, simple yet powerful philosophies and groundbreaking processes.",
       image: "kim.jpg",
-      link: "http://designsuccess.com/"
+      link: "kimnorland/"
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const micrositesData = {
       desc:
         "Our internal market research agency finds solutions where others can’t via our proprietary methodologies.",
       image: "find.jpg",
-      link: "http://gosportsdirect.com/"
+      link: "findout/"
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ const micrositesData = {
       desc:
         "Award-winning development of digital strategies, experiences, applications, prototypes and enterprise solutions.",
       image: "digital.jpg",
-      link: "http://gosportsdirect.com/"
+      link: "digitalsuccess/"
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ const micrositesData = {
       desc:
         "‘Innovating everything’: from brand to products to communication to even buildings – all becoming innovating experiences.",
       image: "money.jpg",
-      link: "http://gosportsdirect.com/"
+      link: "moneygram/"
     },
     {
       id: 5,
@@ -41,7 +41,7 @@ const micrositesData = {
       desc:
         "Transformational innovation. Redesigning an airline from a-to-z: from aircraft exterior to zestful airline food",
       image: "mexicana.jpg",
-      link: "http://gosportsdirect.com/"
+      link: "mexicana/"
     },
     {
       id: 6,
@@ -49,7 +49,7 @@ const micrositesData = {
       desc:
         "Sports social media solution to grow, monitor, manage and protect your talent, brand & ROI",
       image: "sports.jpg",
-      link: "http://gosportsdirect.com/"
+      link: "sportsdirect/"
     },
     {
       id: 7,
@@ -57,7 +57,7 @@ const micrositesData = {
       desc:
         "We call her Aieeda (Artificial Intelligence Engagement Engine with Data Analytics) – she not only analyses deep data but interact with customers in a natural way – in multiple languages.",
       image: "aieeda.jpg",
-      link: "http://gosportsdirect.com/"
+      link: "ai/"
     }
   ]
 };
