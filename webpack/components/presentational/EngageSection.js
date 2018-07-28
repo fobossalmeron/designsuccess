@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContactForm from "./../ContactForm";
+import ContactForm from "./../ContactFormInformed";
 import DesignSuccess from "./../../../assets/img/layout/designSuccess.svg";
 import LocationMap from "./../../../assets/img/layout/locationMap.svg";
 import InstagramIcon from "./../../../assets/img/social/instagram.svg";
@@ -10,11 +10,6 @@ import LinkedInIcon from "./../../../assets/img/social/linkedin.svg";
 import TwitterIcon from "./../../../assets/img/social/twitter.svg";
 
 class EngageSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <section id="contact">

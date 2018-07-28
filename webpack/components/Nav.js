@@ -134,7 +134,7 @@ class Nav extends Component {
             className={active}
             onClick={() => this.toggleMenu()}
           />
-          <nav className={active} onClick={() => this.closeNav()}>
+          <nav className={active}>
             <ul>
               <li
                 onClick={() => {
