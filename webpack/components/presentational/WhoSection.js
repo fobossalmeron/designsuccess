@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Swiper from "react-id-swiper";
-import DesignSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/designSuccess.svg";
-import MakingImpossible from "svg-react-loader?name=MakingImpossible!../../../assets/img/layout/makingImpossible.svg";
-import BestOf from "svg-react-loader?name=BestOf!../../../assets/img/layout/bestOf.svg";
+import DesignSuccess from "./../../../assets/img/layout/designSuccess.svg";
+import MakingImpossible from "./../../../assets/img/layout/makingImpossible.svg";
+import BestOf from "./../../../assets/img/layout/bestOf.svg";
 
 class WhoSection extends Component {
   render() {
@@ -111,7 +111,6 @@ class WhoSection extends Component {
             preload="auto"
             autoPlay
             muted
-            playing
             loop
             playsInline
           />

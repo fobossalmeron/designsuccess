@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LaunchIcon from "svg-react-loader?name=LaunchIcon!../../assets/img/layout/launch.svg";
+import LaunchIcon from "./../../assets/img/layout/launch.svg";
 
 const micrositesData = {
   microsites: [

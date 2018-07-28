@@ -6,7 +6,7 @@ import HowSection from "./presentational/HowSection";
 import TrustedSection from "./presentational/TrustedSection";
 import EngageSection from "./presentational/EngageSection";
 import scrollToComponent from "react-scroll-to-component";
-import UnderConstructionIcon from "svg-react-loader?name=UnderConstruction!../../assets/img/underconstruction.svg";
+import UnderConstructionIcon from "./../../assets/img/underconstruction.svg";
 
 class App extends Component {
   constructor(props) {
@@ -66,7 +66,6 @@ class App extends Component {
             preload="auto"
             autoPlay
             muted
-            playing
             loop
             playsInline
           />

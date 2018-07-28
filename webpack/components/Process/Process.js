@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import ProcessModal from "./processModal";
-import InmersionIcon from "svg-react-loader?name=InmersionIcon!../../../assets/img/iso/inmersion.svg";
-import DepthIcon from "svg-react-loader?name=DepthIcon!../../../assets/img/iso/depth.svg";
-import ConceptualIcon from "svg-react-loader?name=ConceptualIcon!../../../assets/img/iso/conceptual.svg";
-import InnovationIcon from "svg-react-loader?name=InnovationIcon!../../../assets/img/iso/innovation.svg";
-import CoreIcon from "svg-react-loader?name=CoreIcon!../../../assets/img/iso/core.svg";
-import ImplementationIcon from "svg-react-loader?name=ImplementationIcon!../../../assets/img/iso/implementation.svg";
+import InmersionIcon from "./../../../assets/img/iso/inmersion.svg";
+import DepthIcon from "./../../../assets/img/iso/depth.svg";
+import ConceptualIcon from "./../../../assets/img/iso/conceptual.svg";
+import InnovationIcon from "./../../../assets/img/iso/innovation.svg";
+import CoreIcon from "./../../../assets/img/iso/core.svg";
+import ImplementationIcon from "./../../../assets/img/iso/implementation.svg";
 
 
 const processData = {

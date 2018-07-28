@@ -1,15 +1,22 @@
 ---
-title: 'design:success'
+title: 'design:success – global award-winning innovation agency, making
+impossible possible!'
 timezone: UTC
 email: success@designsuccess.com
-description: Design Success
-og_image: "/assets/img/og_image.jpg"
+description: 'design:success - The world’s first and only patented &amp; certified
+innovation process. Transforming and reinventing Fortune500
+companies and the world’s greatest brands.'
+keyworkds: 'Innovation agency, business consulting, Innovation, product and service
+design, reinventing, reposition, patented process, insights, branding,
+design, product design, advertising, commercials, store design, design
+success, innovation challenges, Innovation ROI'
+og_image: '/assets/img/og_image.jpg'
 baseurl: 
 url: http://designsuccess.com
 markdown: kramdown
 plugins:
 - jekyll-feed
-- octopress-autoprefixer
+- jekyll-autoprefixer
 exclude:
 - Gemfile
 - Gemfile.lock

@@ -43,9 +43,9 @@ header {
             li {
                 list-style: none;
                 list-style-type: none;
-                a{
+                a {
                     font-size: 1.6rem;
-                    &.active{
+                    &.active {
                         font-weight: 600;
                     }
                 }
@@ -77,20 +77,20 @@ header {
         max-width: 35px;
         cursor: pointer;
         transition: .3s ease all;
-        #top,
-        #mid,
-        #bot {
+        path {
             transition: .3s ease all;
         }
         &.active {
-            #top {
-                transform: translateX(35px)rotate(45deg);
-            }
-            #mid {
-                opacity: 0;
-            }
-            #bot {
-                transform: translateX(-141px) translateY(49px)rotate(-45deg);
+            path {
+                &:nth-child(1) {
+                    transform: translateX(35px)rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateX(-141px) translateY(49px)rotate(-45deg);
+                }
             }
         }
     }
@@ -379,10 +379,11 @@ svg {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 7fr 1fr;
         margin-top: 5%;
-        &:hover{
-            .logoRoller{
-                span{
-                    svg, p{
+        &:hover {
+            .logoRoller {
+                span {
+                    svg,
+                    p {
                         animation-play-state: paused !important;
                     }
                 }
@@ -425,12 +426,13 @@ svg {
                 span p {
                     animation-play-state: paused !important;
                 }
-                ~.logoRoller  {
-                    span{
-                        svg, p{
+                ~.logoRoller {
+                    span {
+                        svg,
+                        p {
                             animation-play-state: paused !important;
                         }
-                    } 
+                    }
                 }
             }
             span {
@@ -563,7 +565,7 @@ svg {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-content: space-between;
-        padding: 0 16.6% 0 10%;
+        padding: 0 12.6% 0 6%;
         margin-top: 4%;
         font-size: 1.6rem;
         &~.locationContact {
@@ -640,6 +642,8 @@ svg {
             resize: none;
             line-height: .5;
             font-size: 1.8rem;
+            max-width: 100%;
+            width: 100%;
             &:focus {
                 outline: none;
             }
@@ -870,12 +874,13 @@ svg {
     transition: .3s ease all;
 }
 
-#layout header{
-     .designSuccessLogo{
-         opacity: 1;
-     }
+#layout header {
+    .designSuccessLogo {
+        opacity: 1;
+    }
 }
-#pageNotFound{
+
+#pageNotFound {
     width: 100%;
     min-height: 50vh;
     position: relative;
@@ -884,4 +889,44 @@ svg {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
+}
+
+.noBackground {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 1.5rem;
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    svg {
+        width: 50px;
+        height: 50px;
+        animation: tick-tock 800ms steps(8, end) infinite;
+        transform-origin: 50% 50%;
+        & * {
+            fill: $brand-main-color !important;
+        }
+    }
+}
+
+@keyframes tick-tock {
+    to {
+        transform: rotate(360deg);
+    }
 }

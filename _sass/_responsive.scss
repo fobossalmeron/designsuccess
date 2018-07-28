@@ -77,6 +77,9 @@
             }
         }
     }
+    #contact .locationContact {
+        font-size: 1.3rem;
+    }
 }
 
 @include media-query(1100px) {
@@ -124,6 +127,10 @@
                 .launchIcon {
                     font-size: 1.5rem;
                     width: 100px;
+                    right: 4%;
+                    top: 30%;
+                    left: unset;
+                    transform: none;
                     svg {
                         display: none;
                     }
@@ -153,8 +160,8 @@
             justify-content: center;
             justify-items: center;
             padding: 15% 10% 15% 4%;
-            .animLogo{
-                display:none;
+            .animLogo {
+                display: none;
             }
         }
         .firstGrid {
@@ -780,8 +787,18 @@
             margin-left: 25px;
         }
     }
-    #contact .locationContact~.locationContact p {
-        font-size: 1.5rem;
+    #contact .locationContact {
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            li{
+               background-color: black;
+            }
+        }
+        &~.locationContact p {
+            font-size: 1.5rem;
+        }
     }
     .sectionContainer {
         .sectionList {

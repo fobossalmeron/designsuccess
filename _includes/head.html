@@ -5,6 +5,7 @@
 
   <title>{% if page.title %}{{ site.title }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
   <meta name="author" content="Rodrigo Salmeron | rodrigosalmeron.mx">
 
   <meta property="og:url" content="{{ page.url |cd replace:'index.html','' | prepend: site.url }}">

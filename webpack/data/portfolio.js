@@ -1,10 +1,10 @@
 import React from "react";
-import InnovationIcon from "svg-react-loader?name=InnovationIcon!./../../assets/img/what/innovation.svg";
-import InsightIcon from "svg-react-loader?name=InsightIcon!./../../assets/img/what/insight.svg";
-import BrandingIcon from "svg-react-loader?name=BrandingIcon!./../../assets/img/what/branding.svg";
-import DigitalIcon from "svg-react-loader?name=DigitalIcon!./../../assets/img/what/digital.svg";
-import MarketingIcon from "svg-react-loader?name=MarketingIcon!./../../assets/img/what/marketing.svg";
-import SocialIcon from "svg-react-loader?name=SocialIcon!./../../assets/img/what/social.svg";
+import InnovationIcon from "./../../assets/img/what/innovation.svg";
+import InsightIcon from "./../../assets/img/what/insight.svg";
+import BrandingIcon from "./../../assets/img/what/branding.svg";
+import DigitalIcon from "./../../assets/img/what/digital.svg";
+import MarketingIcon from "./../../assets/img/what/marketing.svg";
+import SocialIcon from "./../../assets/img/what/social.svg";
 
 const portfolioData = {
   sections: [

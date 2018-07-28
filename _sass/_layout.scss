@@ -327,7 +327,6 @@ h2 {
         #micrositeBack5,
         #micrositeBack6 {
             background-position: 50% 50%;
-            margin-top: -15%;
         }
         #micrositeBack3 {
             background-position: 50% 50%;
@@ -1002,10 +1001,16 @@ h2 {
     }
 }
 
-#section1proyect5,
-#section1proyect6 {
+#section1proyect5 {
     .resource1,
     .resource2 {
+        grid-column-end: span 2;
+    }
+}
+#section1proyect6{
+    .resource1,
+    .resource2,
+    .resource4 {
         grid-column-end: span 2;
     }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Text, Select, TextArea, NestedForm, FormError } from 'react-form';
+import { Form, Text, TextArea } from 'react-form';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class ContactForm extends Component {
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
 
-              const url = 'https://formspree.io/fobos.salmeron@gmail.com';
+              const url = 'https://formspree.io/success@designsuccess.com';
               var data = values;
               var myself = this;
               var xhr = new XMLHttpRequest();

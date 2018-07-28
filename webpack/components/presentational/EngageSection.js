@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import ContactForm from "./../ContactForm";
-import DesignSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../../assets/img/layout/designSuccess.svg";
-import LocationMap from "svg-react-loader?name=LocationMap!../../../assets/img/layout/locationMap.svg";
-import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../../assets/img/social/instagram.svg";
-import FacebookIcon from "svg-react-loader?name=FacebookIcon!../../../assets/img/social/facebook.svg";
-import VimeoIcon from "svg-react-loader?name=VimeoIcon!../../../assets/img/social/vimeo.svg";
-import YouTubeIcon from "svg-react-loader?name=YouTubeIcon!../../../assets/img/social/youtube.svg";
-import LinkedInIcon from "svg-react-loader?name=LinkedInIcon!../../../assets/img/social/linkedin.svg";
-import TwitterIcon from "svg-react-loader?name=TwitterIcon!../../../assets/img/social/twitter.svg";
+import DesignSuccess from "./../../../assets/img/layout/designSuccess.svg";
+import LocationMap from "./../../../assets/img/layout/locationMap.svg";
+import InstagramIcon from "./../../../assets/img/social/instagram.svg";
+import FacebookIcon from "./../../../assets/img/social/facebook.svg";
+import VimeoIcon from "./../../../assets/img/social/vimeo.svg";
+import YouTubeIcon from "./../../../assets/img/social/youtube.svg";
+import LinkedInIcon from "./../../../assets/img/social/linkedin.svg";
+import TwitterIcon from "./../../../assets/img/social/twitter.svg";
 
 class EngageSection extends Component {
   constructor(props) {
@@ -24,7 +24,9 @@ class EngageSection extends Component {
           <ul className="chooseList">
             <li>las vegas</li>
             <li>mexico city</li>
-            <li>copenhaguen</li>
+            <li>chicago</li>
+            <li>toronto</li>
+            <li>copenhagen</li>
             <li>singapore</li>
           </ul>
         </div>

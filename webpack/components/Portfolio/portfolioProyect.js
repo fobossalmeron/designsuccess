@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PlayIcon from "svg-react-loader?name=PlayIcon!../../../assets/img/layout/playButton.svg";
+import PlayIcon from "./../../../assets/img/layout/playButton.svg";
 
 class ProyectPortfolio extends Component {
   constructor(props) {

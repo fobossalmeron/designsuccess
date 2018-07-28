@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import Modal from "react-modal";
 import Process from "./../Process/Process.js";
-import PlayButton from "svg-react-loader?name=PlayButton!../../../assets/img/layout/playButton.svg";
-import ClientMoneyAmigo from "svg-react-loader?name=ClientMoneyAmigo!../../../assets/img/clients/clientMoneyAmigo.svg";
-import ClientAmigoHealth from "svg-react-loader?name=ClientAmigoHealth!../../../assets/img/clients/clientAmigoHealth.svg";
-import ClientFindSmile from "svg-react-loader?name=ClientFindSmile!../../../assets/img/clients/clientFindSmile.svg";
-import ClientLudbeck from "svg-react-loader?name=ClientLudbeck!../../../assets/img/clients/clientLudbeck.svg";
-import ClientMyBlueDoctor from "svg-react-loader?name=ClientMyBlueDoctor!../../../assets/img/clients/clientMyBlueDoctor.svg";
-import ClientNovoNordisk from "svg-react-loader?name=ClientNovoNordisk!../../../assets/img/clients/clientNovoNordisk.svg";
 
 Modal.setAppElement("#app");
 class HowSection extends Component {
