@@ -51,7 +51,7 @@ class EngageSection extends Component {
           </div>
           <p>
             © design success international ds worldwide consulting llc. all
-            rights reserved. <a>privacy of use</a> | <a>terms & conditions</a>
+            rights reserved. <a href="/privacy">privacy of use</a> | <a href="/terms">terms & conditions</a>
           </p>
         </footer>
       </section>

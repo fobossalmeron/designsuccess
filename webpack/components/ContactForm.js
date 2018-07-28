@@ -40,7 +40,7 @@ class ContactForm extends Component {
             onSubmit={(values) => {
               console.log('Form Submitted Succesfully with:', values)
 
-              const url = 'https://formspree.io/success@designsuccess.com';
+              const url = 'https://formspree.io/mgydvdem';
               var data = values;
               var myself = this;
               var xhr = new XMLHttpRequest();

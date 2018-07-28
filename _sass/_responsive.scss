@@ -671,6 +671,11 @@
 }
 
 @include media-query(700px) {
+    .PDF_header{
+        h1{
+            font-size:4rem;
+        }
+    }
     .processContainer {
         h4 {
             padding-left: 0;
@@ -744,6 +749,12 @@
 }
 
 @include media-query(500px) {
+    .PDF_header{
+        padding-top: 60px;
+        h1{
+            font-size:3.4rem;
+        }
+    }
     .processContainer {
         .processModal p {
             font-size: 1.8rem;
