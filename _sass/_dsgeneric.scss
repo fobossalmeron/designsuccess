@@ -629,6 +629,9 @@ svg {
                 color: orange;
                 font-size: 1.3rem;
             }
+            .hidden{
+                display: none;
+            }
         }
         p {
             font-size: 3rem;
@@ -690,6 +693,8 @@ svg {
             width: 90px;
             padding: 5px;
             margin-top: 10%;
+            margin-left: 5px;
+            margin-bottom: 5px;
             cursor: pointer;
             transition: .3s ease all;
             &:hover {

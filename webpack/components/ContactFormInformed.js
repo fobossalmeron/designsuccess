@@ -37,10 +37,9 @@ class ContactForm extends Component {
       if (response.target.status === 0) {
         // Failed XmlHttpRequest should be considered an undefined error.
         console.log("Danger");
-      } else if (response.target.status === 400) {
-        console.log(JSON.parse(responseText).error);
       } else if (response.target.status === 403) {
-        console.log(JSON.parse(responseText).error);
+        console.log(response.responseText);
+        console.log("formspree submission failed")
       } else if (response.target.status === 200) {
         console.log("AJAX success, mail sent!");
         myself.showConf();
@@ -102,6 +101,7 @@ class ContactForm extends Component {
         >
           {({ formState }) => (
             <div className="formGrid">
+              <Text field='page' initialValue={document.URL} className='hidden'/>
               <div>
                 <Text
                   field="name"
