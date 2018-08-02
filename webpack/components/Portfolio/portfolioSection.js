@@ -14,7 +14,7 @@ class SectionPortfolio extends Component {
         onClick={() => this.props.toggleProyect(proyect)}
         style={{
           backgroundSize: `${proyect.coverType !== undefined && proyect.coverType === "vector"? "contain" : ""}`,
-          backgroundImage: `url(assets/img/portfolio/${section.id}/${
+          backgroundImage: `url(/assets/img/portfolio/${section.id}/${
             proyect.id
           }/cover.${proyect.coverType !== undefined && proyect.coverType === "vector"? "svg" : "jpg"})`
         }}

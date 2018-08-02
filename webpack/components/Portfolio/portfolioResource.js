@@ -16,7 +16,7 @@ class ResourcePortfolio extends Component {
       <div
         className="imageResource"
         style={{
-          backgroundImage: `url(assets/img/portfolio/${section.id}/${
+          backgroundImage: `url(/assets/img/portfolio/${section.id}/${
             proyect.id
           }/${resource.id}.${imageType})`
         }}

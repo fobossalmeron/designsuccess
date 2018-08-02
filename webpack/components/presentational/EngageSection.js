@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContactForm from "./../ContactFormInformed";
+import ContactForm from "./../ContactForm";
 import DesignSuccess from "./../../../assets/img/layout/designSuccess.svg";
 import LocationMap from "./../../../assets/img/layout/locationMap.svg";
 import InstagramIcon from "./../../../assets/img/social/instagram.svg";

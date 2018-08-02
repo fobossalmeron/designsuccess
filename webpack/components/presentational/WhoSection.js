@@ -5,6 +5,10 @@ import MakingImpossible from "./../../../assets/img/layout/makingImpossible.svg"
 import BestOf from "./../../../assets/img/layout/bestOf.svg";
 
 class WhoSection extends Component {
+  componentDidMount(){
+    this.refs.video.setAttribute('muted', true);
+    this.refs.video.play();
+  }
   render() {
     const params = {
       direction: "vertical",
@@ -107,8 +111,9 @@ class WhoSection extends Component {
         <div id="homevideo">
           <div className="video_overlay" />
           <video
-            src="assets/video/intro.mp4"
+            src="/assets/video/intro.mp4"
             preload="auto"
+            ref="video"
             autoPlay
             muted
             loop

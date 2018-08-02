@@ -16,7 +16,7 @@ class ProyectPortfolio extends Component {
         onClick={() => this.props.toggleResource(resource)}
         style={{
           backgroundSize: `${resource.type === "vector"? "contain" : ""}`,
-          backgroundImage: `url(assets/img/portfolio/${section.id}/${
+          backgroundImage: `url(/assets/img/portfolio/${section.id}/${
             proyect.id
           }/${resource.id}.${resource.type === "vector"? "svg" : "jpg"})`
         }}

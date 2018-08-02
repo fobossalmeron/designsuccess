@@ -2,7 +2,8 @@ module.exports = {
   mode: "development",
   entry: {
     homepage: "./webpack/homepage.js",
-    notfound: "./webpack/notfound.js"
+    notfound: "./webpack/notfound.js",
+    beta: "./webpack/beta.js"
   },
   output: {
     filename: "[name].js",
