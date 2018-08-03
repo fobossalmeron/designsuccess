@@ -37,14 +37,14 @@ class EngageSection extends Component {
         <LocationMap className="locationMap" />
         <footer>
           <div className="socialList">
-            <FacebookIcon className="socialIcon" />
-            <VimeoIcon className="socialIcon" />
-            <YouTubeIcon className="socialIcon" />
-            <InstagramIcon className="socialIcon" />
-            <LinkedInIcon className="socialIcon" />
-            <TwitterIcon className="socialIcon" />
+            <a href="https://www.facebook.com/designsuccessworldwide/"><FacebookIcon className="socialIcon" /></a>
+            <a href="https://vimeo.com/user16040545"><VimeoIcon className="socialIcon" /></a>
+            <a href="https://www.youtube.com/designsuccess/"><YouTubeIcon className="socialIcon" /></a>
+            <a href="https://www.instagram.com/designsuccessworldwide/"><InstagramIcon className="socialIcon" /></a>
+            <a href="https://www.linkedin.com/company/designsuccess"><LinkedInIcon className="socialIcon"/> </a>
+            <a href="https://twitter.com/wedesignsuccess"><TwitterIcon className="socialIcon" /></a>
           </div>
-          <p>
+          <p> 
             © design success international ds worldwide consulting llc. all
             rights reserved. <a href="/privacy">privacy of use</a> | <a href="/terms">terms & conditions</a>
           </p>

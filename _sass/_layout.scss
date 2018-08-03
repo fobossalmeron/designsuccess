@@ -1036,11 +1036,11 @@ h2 {
 }
 
 #section2proyect7 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     .resource1,
-    .resource2,
-    .resource3 {
-        grid-row-end: span 2;
+    .resource2 {
+        grid-row-end: span 1;
     }
 }
 

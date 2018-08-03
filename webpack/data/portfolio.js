@@ -337,7 +337,7 @@ const portfolioData = {
         },
         {
           id: 7,
-          title: "proven outcome",
+          title: "win-win gaming process",
           text:
             "A robust process & proven outcome for casinos and lotteries based upon our ISO 9001 structure.</br></br>Our unique casino & lottery methodologies have proven to increase revenue/profit, share-of-wallet, and other parameters. As well as attract both established players and Millennials by addressing positioning, branding, marketing, experience, sustainability, and development.</br></br>In exclusivity, projects are lead by world re-known casino expert Steve Karoul. With over 38 years of experience combined with casino-related business experience in over 125 countries make this the perfect match.</br></br>This methodology has been utilized by many of the world’s largest casino resort corporations, operators and large-scale resorts across four continents.",
           resources: [
@@ -347,10 +347,6 @@ const portfolioData = {
             },
             {
               id: 2,
-              type: "image"
-            },
-            {
-              id: 3,
               type: "image"
             }
           ]

@@ -629,7 +629,7 @@ svg {
                 color: orange;
                 font-size: 1.3rem;
             }
-            .hidden{
+            .hidden {
                 display: none;
             }
         }
@@ -745,10 +745,19 @@ svg {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             justify-items: center;
+            a {
+                cursor: pointer;
+            }
             svg {
                 width: 25px;
+                &:hover {
+                    & * {
+                        fill: white;
+                    }
+                }
                 & * {
                     fill: grey;
+                    transition: ease .3s all;
                 }
             }
         }
