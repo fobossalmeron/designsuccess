@@ -595,7 +595,7 @@ const portfolioData = {
             {
               id: 3,
               type: "video",
-              url: "https://vimeo.com/219011983"
+              url: "https://vimeo.com/219007429"
             },
             {
               id: 4,
@@ -623,7 +623,7 @@ const portfolioData = {
             {
               id: 1,
               type: "video",
-              url: "https://vimeo.com/219006755"
+              url: "https://vimeo.com/278004864"
             }
           ]
         },
@@ -641,7 +641,7 @@ const portfolioData = {
             {
               id: 2,
               type: "video",
-              url: "https://vimeo.com/187759685/6318d6bc72"
+              url: "https://vimeo.com/228273116"
             },
             {
               id: 3,
@@ -715,12 +715,12 @@ const portfolioData = {
             {
               id: 1,
               type: "video",
-              url:"https://vimeo.com/264421949"
+              url:"https://vimeo.com/246489216"
             },
             {
               id: 2,
               type: "video",
-              url: "https://vimeo.com/264421949"
+              url: "https://vimeo.com/261387695/710b6a67b9"
             },
             {
               id: 3,
@@ -795,7 +795,7 @@ const portfolioData = {
             {
               id: 1,
               type: "video",
-              url: "https://vimeo.com/143683357"
+              url: "https://vimeo.com/228273116"
             },
             {
               id: 2,
