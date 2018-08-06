@@ -67,8 +67,36 @@ class Microsites extends Component {
     super(props);
     this.state = {
       selectedMicrosite: "",
-      modalToggled: false
+      modalToggled: false,
+      safariReload: false
     };
+  }
+
+  componentDidMount() {
+    var firstTime = setTimeout(
+      function() {
+          this.setState({safariReload: true}, () => this.removeClass())
+      }
+      .bind(this),
+      100
+  );
+  }
+
+  removeClass(){
+    console.log("entré a removeclass");
+    var secondTime = setTimeout(
+      function() {
+          this.setState({safariReload: false});
+      }
+      .bind(this),
+      1500
+  );
+    console.log("sali de removeclass");
+  }
+
+  componentWillUnmount() {
+    clearTimeout(firstTime);
+    clearTimeout(secondTime);
   }
 
   closeModal() {
@@ -137,10 +165,11 @@ class Microsites extends Component {
         }}
       />
     ));
+    var reload = this.state.safariReload? "special" : "";
     return (
-      <ul className="micrositesContainer">
+      <ul className={"micrositesContainer " + reload}>
         {micrositesList}
-        <ul className="micrositesBackgrounds">{micrositesImages}</ul>
+        <ul className={"micrositesBackgrounds"}>{micrositesImages}</ul>
       </ul>
     );
   }

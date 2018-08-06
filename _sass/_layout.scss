@@ -173,6 +173,7 @@ section {
         grid-gap: 10rem;
         svg{
             max-width: 400px;
+            overflow:visible;
         }
     }
 }
@@ -324,6 +325,17 @@ h2 {
         position: absolute;
         width: 100%;
         opacity: 0.7;
+        &.special{
+            #micrositeBack4 {
+                flex-grow: 2;
+                min-width: 100%;
+                max-width: 100%;
+                width:100%;
+            }
+            .backgroundContainer{
+                min-width: 0;
+            }
+        }
         #micrositeBack5,
         #micrositeBack6 {
             background-position: 50% 50%;
@@ -333,10 +345,9 @@ h2 {
         }
         .backgroundContainer {
             position: relative;
-            flex-grow: 1;
             transition: .3s ease-out all;
             height: calc(100vh - 110px);
-            min-width: 14.285%;
+            width: 14.285%;
             max-width: 100%;
             background-position: top center;
             background-size: cover;
@@ -384,9 +395,7 @@ h2 {
     }
     @for $i from 1 through 7 {
         #microsite#{$i}:hover~.micrositesBackgrounds #micrositeBack#{$i} {
-            flex-grow: 2;
-            min-width: 100%;
-            max-width: 100%;
+            width: 100%;
         }
     }
     .micrositesContainer {
@@ -394,6 +403,10 @@ h2 {
         display: grid;
         overflow: hidden;
         grid-template-columns: repeat(7, 1fr);
+        transition: .3s ease all;
+        &.special{
+            grid-template-columns: repeat(9, 1fr);
+        }
         &:hover li:not(:hover) {
             opacity: 0.3;
         }
@@ -440,7 +453,7 @@ h2 {
             }
             &:hover {
                 ~.micrositesBackgrounds .backgroundContainer {
-                    min-width: 0;
+                    width: 0;
                 }
                 .launchIcon {
                     width: 110px;
@@ -552,6 +565,7 @@ h2 {
             font-weight: 200;
             hyphens: auto;
             align-self: flex-start;
+            z-index: 1;
             b {
                 font-weight: 600;
             }

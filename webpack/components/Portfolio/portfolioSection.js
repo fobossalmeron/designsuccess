@@ -13,17 +13,29 @@ class SectionPortfolio extends Component {
         className={"proyect" + proyect.id}
         onClick={() => this.props.toggleProyect(proyect)}
         style={{
-          backgroundSize: `${proyect.coverType !== undefined && proyect.coverType === "vector"? "contain" : ""}`,
+          backgroundSize: `${
+            proyect.coverType !== undefined && proyect.coverType === "vector"
+              ? "contain"
+              : ""
+          }`,
           backgroundImage: `url(/assets/img/portfolio/${section.id}/${
             proyect.id
-          }/cover.${proyect.coverType !== undefined && proyect.coverType === "vector"? "svg" : "jpg"})`
+          }/cover.${
+            proyect.coverType !== undefined && proyect.coverType === "vector"
+              ? "svg"
+              : "jpg"
+          })`
         }}
-      > 
+      >
         <h5>{proyect.title}</h5>
       </li>
     ));
     return (
-      <div className={this.props.sectionToggled? "sectionModal active" : "sectionModal"}>
+      <div
+        className={
+          this.props.sectionToggled ? "sectionModal active" : "sectionModal"
+        }
+      >
         <a className="close" onClick={() => this.props.closeSection()} />
         <a className="next" onClick={() => this.props.nextModal(section)} />
         <a

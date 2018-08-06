@@ -63,7 +63,69 @@
         padding-left: 16.6%;
     }
 }
-
+@include media-query(1250px){
+    .processContainer {
+        margin-bottom: 2%;
+        .processList {
+            &.hideMe {
+                max-height: 500px;
+            }
+        }
+        .close {
+            right: 4%;
+        }
+        .next {
+            right: 4%;
+            top: 130px;
+            opacity: 0.5;
+        }
+        .prev {
+            left: 4%;
+        }
+        .process {
+            grid-template-areas: "title";
+            grid-template-rows: 1fr;
+            max-height: 340px;
+            &:hover svg {
+                #back {
+                    display: none;
+                }
+                #first {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+            h3 {
+                margin-top: 0;
+            }
+            .processIcon {
+                transform: translateY(-20%);
+                svg * {
+                    animation-play-state: running;
+                    stroke: url(#GradientISO);
+                }
+            }
+        }
+        .processModal {
+            p {
+                display: block;
+            }
+            .processIcon {
+                transform: translateY(-25%);
+                svg * {
+                    animation-play-state: running;
+                    stroke: url(#GradientISO);
+                }
+            }
+        }
+        p {
+            display: none;
+        }
+        h4 {
+            grid-column-start: 1;
+        }
+    }
+}
 @include media-query(1200px) {
     .sectionContainer {
         .sectionList .section {
@@ -399,7 +461,8 @@
             padding-left: 0;
         }
         .firstColumned {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             span {
                 &:nth-of-type(2) {
                     display: none;
@@ -686,9 +749,6 @@
         .processList {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            &.hideMe {
-                max-height: 70vh;
-            }
         }
         .process .processIcon {
             transform: translateY(-20%);
@@ -745,6 +805,12 @@
     }
 }
 
+@include media-query(550px) {
+    .processContainer .process .processIcon {
+        max-height: 230px;
+    }
+}
+
 @include media-query(500px) {
     .PDF_header{
         padding-top: 60px;
@@ -755,9 +821,6 @@
     .processContainer {
         .processModal p {
             font-size: 1.8rem;
-        }
-        .processList.hideMe {
-            max-height: 90vh;
         }
         .process {
             .processIcon {
@@ -821,11 +884,14 @@
         }
     }
 }
-
+@include media-query(450px){
+    .processContainer .process .processIcon {
+        transform: translateY(-40%);
+    }
+}
 @include media-query(400px) {
     .processContainer .process {
         .processIcon {
-            transform: translateY(-50%);
             max-height: 185px;
         }
     }

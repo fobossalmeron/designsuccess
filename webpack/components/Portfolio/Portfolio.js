@@ -21,13 +21,16 @@ class Portfolio extends Component {
   closeSection() {
     this.setState({
       sectionToggled: false,
-      videoPlaying: false
+      proyectToggled: false,
+      resourceToggled: false,
+      videoPlaying: false,
     });
   }
 
   closeProyect() {
     this.setState({
       proyectToggled: false,
+      resourceToggled: false,
       videoPlaying: false
     });
   }
@@ -35,7 +38,8 @@ class Portfolio extends Component {
   closeResource() {
     this.setState({
       resourceToggled: false,
-      videoPlaying: false
+      videoPlaying: false,
+      selectedResource: portfolioData.sections[0].proyects[0].resources[0]
     });
   }
 
@@ -101,9 +105,9 @@ class Portfolio extends Component {
   toggleSection(section) {
     this.setState({
       sectionToggled: true,
+      selectedSection: section,
       proyectToggled: false,
       resourceToggled: false,
-      selectedSection: section,
       videoPlaying: false
     });
   }

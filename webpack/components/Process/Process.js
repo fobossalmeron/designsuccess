@@ -96,7 +96,7 @@ class Process extends Component {
   }
 
   toggleModal(selected) {
-    if (window.innerWidth < 1001){
+    if (window.innerWidth < 1250){
       this.setState({
         modalToggled: true,
         selectedProcess: selected
