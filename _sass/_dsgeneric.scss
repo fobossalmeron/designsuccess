@@ -612,6 +612,9 @@ svg {
         margin-top: 10%;
         line-height: .9;
         padding-left: 0;
+        svg{
+            max-width: 460px;
+        }
     }
     .form {
         grid-area: form;

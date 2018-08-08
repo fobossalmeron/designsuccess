@@ -63,7 +63,8 @@
         padding-left: 16.6%;
     }
 }
-@include media-query(1250px){
+
+@include media-query(1250px) {
     .processContainer {
         margin-bottom: 2%;
         .processList {
@@ -126,6 +127,7 @@
         }
     }
 }
+
 @include media-query(1200px) {
     .sectionContainer {
         .sectionList .section {
@@ -737,9 +739,12 @@
 }
 
 @include media-query(700px) {
-    .PDF_header{
-        h1{
-            font-size:4rem;
+    #trustedby .firstColumned p {
+        text-align: left;
+    }
+    .PDF_header {
+        h1 {
+            font-size: 4rem;
         }
     }
     .processContainer {
@@ -812,10 +817,10 @@
 }
 
 @include media-query(500px) {
-    .PDF_header{
+    .PDF_header {
         padding-top: 60px;
-        h1{
-            font-size:3.4rem;
+        h1 {
+            font-size: 3.4rem;
         }
     }
     .processContainer {
@@ -859,12 +864,12 @@
         }
     }
     #contact .locationContact {
-        ul{
+        ul {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             justify-items: center;
-            li{
-               background-color: black;
+            li {
+                background-color: black;
             }
         }
         &~.locationContact p {
@@ -884,15 +889,27 @@
         }
     }
 }
-@include media-query(450px){
+
+@include media-query(450px) {
     .processContainer .process .processIcon {
         transform: translateY(-40%);
     }
 }
+
 @include media-query(400px) {
-    .processContainer .process {
-        .processIcon {
-            max-height: 185px;
+    #contact .locationMap {
+        min-width: 470px;
+    }
+    .processContainer {
+        margin-bottom: 20%;
+        .process {
+            .processIcon {
+                max-height: 185px;
+                &.process6 {
+                    margin-top: -70px;
+                    margin-bottom: 50px;
+                }
+            }
         }
     }
     #contact h2 {

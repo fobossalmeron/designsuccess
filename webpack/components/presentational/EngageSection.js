@@ -8,13 +8,14 @@ import VimeoIcon from "./../../../assets/img/social/vimeo.svg";
 import YouTubeIcon from "./../../../assets/img/social/youtube.svg";
 import LinkedInIcon from "./../../../assets/img/social/linkedin.svg";
 import TwitterIcon from "./../../../assets/img/social/twitter.svg";
+import ChallengesWelcome from "./../../../assets/img/layout/challengesWelcome.svg";
 
 class EngageSection extends Component {
   render() {
     return (
       <section id="contact">
         <DesignSuccess className="engageLogo" />
-        <h2>challenges welcome</h2>
+        <h2><ChallengesWelcome/></h2>
         <div className="locationContact">
           <ul className="chooseList">
             <li>las vegas</li>
