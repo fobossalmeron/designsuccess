@@ -5,9 +5,29 @@ import MakingImpossible from "./../../../assets/img/layout/makingImpossible.svg"
 import BestOf from "./../../../assets/img/layout/bestOf.svg";
 
 class WhoSection extends Component {
-  componentDidMount(){
-    this.refs.video.setAttribute('muted', true);
+  constructor() {
+    super();
+    this.playVideo = this.playVideo.bind(this);
+  }
+  chooseFreeMode() {
+    if (window.innerWidth < 1000) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidMount() {
+    this.refs.video.setAttribute("muted", true);
+    this.refs.video.pause();
+    this.playVideo();
+  }
+
+  playVideo() {
     this.refs.video.play();
+    var myself = this
+    setTimeout(function() {
+      myself.refs.video.play();
+    }, 500);
   }
   render() {
     const params = {
@@ -16,8 +36,8 @@ class WhoSection extends Component {
       spaceBetween: 30,
       effect: "fade",
       freeModeMomentum: false,
-      freeMode: false,
-      freeModeMinimumVelocity: 1000000000,
+      freeMode: this.chooseFreeMode(),
+      freeModeMinimumVelocity: 1000000000000000000000000000000000000,
       fadeEffect: {
         crossFade: true
       },
@@ -53,7 +73,8 @@ class WhoSection extends Component {
                   we are a global team that innovate, impact and (re)- invent
                   iconic brands, their products, services and experiences from
                   a-to-z.
-                  <br />we, <b>design success</b>.
+                  <br />
+                  we, <b>design success</b>.
                 </p>
               </div>
             </div>
@@ -112,12 +133,12 @@ class WhoSection extends Component {
           <div className="video_overlay" />
           <video
             src="/assets/video/intro.mp4"
-            preload="auto"
             ref="video"
             autoPlay
             muted
             loop
             playsInline
+            key="playOne"
           />
         </div>
       </section>

@@ -26,3 +26,5 @@ sass:
   style: compressed
 github:
 - metadata
+autoprefixer:
+  only_production: false

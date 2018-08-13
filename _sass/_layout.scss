@@ -530,8 +530,7 @@ h2 {
                 & * {
                     fill: none;
                     stroke-width: 2px;
-                    stroke-dasharray: .5 12;
-                    stroke-dashoffset: 50;
+                    stroke-dasharray: .5px 12px;
                     animation: dash 5s linear infinite forwards;
                     stroke-linecap: round;
                     stroke-width: 3;
@@ -650,7 +649,7 @@ h2 {
         transition: .3s ease all;
     }
     .processIcon {
-        grid-area: iconTitle;
+        grid-area: iconTitle; 
         max-width: 200px;
         width: 100%;
         height: auto;
@@ -672,8 +671,7 @@ h2 {
             & * {
                 fill: none;
                 stroke-width: 2px;
-                stroke-dasharray: .5 12;
-                stroke-dashoffset: 50;
+                stroke-dasharray: .5px 12px;
                 animation: dash 5s linear infinite forwards;
                 stroke-linecap: round;
                 stroke-width: 3;
@@ -961,6 +959,7 @@ h2 {
                         & * {
                             stroke: url("#GradientWHAT");
                             animation-play-state: running;
+                            -webkit-animation-play-state: running;
                         }
                     }
                 }
@@ -981,17 +980,20 @@ h2 {
                 svg {
                     max-width: 100%;
                     transition: 1s ease all;
+                    -webkit-transform: translate3d(0.0001,0,0);
                     & * {
                         fill: none;
-                        stroke-dasharray: .1 12;
-                        stroke-dashoffset: 50;
+                        stroke-dasharray: 1px 12px;
                         stroke-linecap: round;
                         stroke-width: 3px;
                         transition: .3s ease all;
                         stroke: #666666;
-                        animation: dash 5s ease-in-out infinite alternate;
+                        animation: dash 5s linear infinite forwards;
                         animation-play-state: paused;
-                        transition: 1s ease all;
+                        -webkit-backface-visibility: hidden;
+                        &:before, &:after{
+                            display: none;
+                        }
                     }
                 }
             }

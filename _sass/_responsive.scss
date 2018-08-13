@@ -18,6 +18,9 @@
 }
 
 @include media-query(1300px) {
+    #trustedby {
+        padding: 10% 3% 18% 3%;
+    }
     .sectionContainer {
         .sectionList .section {
             min-height: 320px;
@@ -284,7 +287,10 @@
                 min-height: 270px;
                 max-width: 100%;
                 bottom: 0;
-                justify-content: center;
+                justify-content: flex-start;
+                .videoResource {
+                    margin-top: 20%;
+                }
             }
             &.proyectModal {
                 bottom: 0;

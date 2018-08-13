@@ -7,7 +7,7 @@ const micrositesData = {
       id: 1,
       title: "our founder</br>Kim Norland",
       desc:
-        "Our founders, Kim Norland’s, simple yet powerful philosophies and groundbreaking processes.",
+        "Our founder, Kim Norland’s, simple yet powerful philosophies and groundbreaking processes.",
       image: "kim.jpg",
       link: "kimnorland/"
     },
