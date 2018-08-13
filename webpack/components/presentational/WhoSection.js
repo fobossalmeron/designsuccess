@@ -41,10 +41,7 @@ class WhoSection extends Component {
       fadeEffect: {
         crossFade: true
       },
-      mousewheel: {
-        releaseOnEdges: true,
-        sensitivity: 0
-      },
+      mousewheel: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
