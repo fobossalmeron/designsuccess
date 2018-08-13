@@ -9,13 +9,6 @@ class WhoSection extends Component {
     super();
     this.playVideo = this.playVideo.bind(this);
   }
-  chooseFreeMode() {
-    if (window.innerWidth < 1000) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   componentDidMount() {
     this.refs.video.setAttribute("muted", true);
     this.refs.video.pause();
@@ -35,11 +28,12 @@ class WhoSection extends Component {
       slidesPerView: 1,
       spaceBetween: 30,
       effect: "fade",
-      freeModeMomentum: false,
-      freeMode: this.chooseFreeMode(),
-      freeModeMinimumVelocity: 1000000000000000000000000000000000000,
       fadeEffect: {
         crossFade: true
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
       },
       mousewheel: false,
       pagination: {
