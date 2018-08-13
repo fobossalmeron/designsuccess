@@ -27,13 +27,15 @@ class WhoSection extends Component {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 30,
+      touchReleaseOnEdges: true,
       effect: "fade",
       fadeEffect: {
         crossFade: true
       },
       autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
+        delay: 3500,
+        disableOnInteraction: true,
+        stopOnLastSlide: true
       },
       mousewheel: false,
       pagination: {
