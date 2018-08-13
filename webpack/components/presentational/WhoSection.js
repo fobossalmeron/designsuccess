@@ -33,11 +33,13 @@ class WhoSection extends Component {
         crossFade: true
       },
       autoplay: {
-        delay: 3500,
+        delay: 4500,
         disableOnInteraction: true,
         stopOnLastSlide: true
       },
-      mousewheel: false,
+      mousewheel: {
+        releaseOnEdges: true
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -47,7 +49,7 @@ class WhoSection extends Component {
       <section id="home">
         <div className="overVideo">
           <Swiper {...params}>
-            <div>
+            <div data-swiper-autoplay="4000">
               <div className="screen firstGrid">
                 <DesignSuccess className="animLogo" />
                 <h1>
@@ -56,7 +58,7 @@ class WhoSection extends Component {
               </div>
             </div>
 
-            <div>
+            <div data-swiper-autoplay="6000">
               <div className="screen firstGrid secondFirstGrid">
                 <DesignSuccess className="animLogo" />
                 <h1>
@@ -72,7 +74,7 @@ class WhoSection extends Component {
               </div>
             </div>
 
-            <div>
+            <div data-swiper-autoplay="6000">
               <div className="screen secondGrid">
                 <DesignSuccess className="animLogo" />
                 <h1>
@@ -95,7 +97,7 @@ class WhoSection extends Component {
               </div>
             </div>
 
-            <div>
+            <div data-swiper-autoplay="6000">
               <div className="screen thirdGrid">
                 <DesignSuccess className="animLogo" />
                 <h2>
