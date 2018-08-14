@@ -29,6 +29,8 @@ class WhoSection extends Component {
       spaceBetween: 30,
       touchReleaseOnEdges: true,
       effect: "fade",
+      allowTouchMove: false,
+      touchMoveStopPropagation: false,
       fadeEffect: {
         crossFade: true
       },
@@ -37,9 +39,7 @@ class WhoSection extends Component {
         disableOnInteraction: true,
         stopOnLastSlide: true
       },
-      mousewheel: {
-        releaseOnEdges: true
-      },
+      mousewheel: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
