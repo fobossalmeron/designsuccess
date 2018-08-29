@@ -3,6 +3,11 @@ import Swiper from "react-id-swiper";
 import DesignSuccess from "./../../../assets/img/layout/designSuccess.svg";
 import MakingImpossible from "./../../../assets/img/layout/makingImpossible.svg";
 import BestOf from "./../../../assets/img/layout/bestOf.svg";
+import {
+  isMobileSafari,
+  osVersion,
+  browserVersion
+} from "react-device-detect";
 
 class WhoSection extends Component {
   constructor() {
@@ -13,6 +18,9 @@ class WhoSection extends Component {
     this.refs.video.setAttribute("muted", true);
     this.refs.video.pause();
     this.playVideo();
+
+    console.log("is mobile safari: " + isMobileSafari + ". Os version is: " + osVersion + " browser Version is: " + browserVersion)
+
   }
 
   playVideo() {

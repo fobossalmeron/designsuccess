@@ -24,9 +24,9 @@ class HowSection extends Component {
   render() {
     return (
       <section id="how">
-        {/* <h2>how</h2>
+        <h2>how</h2>
         <h4>video: our patented & ISO:9001 certified process</h4>
-        <ReactPlayer className="video" url="https://vimeo.com/277716813" />*/}
+        <ReactPlayer className="video" url="https://vimeo.com/286558912" />
         <h2>how</h2>
         <h4 id="outOfGrid">our patented & ISO:9001 certified process</h4>
         <Process />
