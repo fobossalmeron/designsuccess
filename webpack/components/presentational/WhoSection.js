@@ -3,11 +3,7 @@ import Swiper from "react-id-swiper";
 import DesignSuccess from "./../../../assets/img/layout/designSuccess.svg";
 import MakingImpossible from "./../../../assets/img/layout/makingImpossible.svg";
 import BestOf from "./../../../assets/img/layout/bestOf.svg";
-import {
-  isMobileSafari,
-  osVersion,
-  browserVersion
-} from "react-device-detect";
+import { isMobileSafari, osVersion, browserVersion } from "react-device-detect";
 
 class WhoSection extends Component {
   constructor() {
@@ -19,13 +15,19 @@ class WhoSection extends Component {
     this.refs.video.pause();
     this.playVideo();
 
-    console.log("is mobile safari: " + isMobileSafari + ". Os version is: " + osVersion + " browser Version is: " + browserVersion)
-
+    console.log(
+      "is mobile safari: " +
+        isMobileSafari +
+        ". Os version is: " +
+        osVersion +
+        " browser Version is: " +
+        browserVersion
+    );
   }
 
   playVideo() {
     this.refs.video.play();
-    var myself = this
+    var myself = this;
     setTimeout(function() {
       myself.refs.video.play();
     }, 500);
@@ -73,9 +75,9 @@ class WhoSection extends Component {
                   <MakingImpossible />
                 </h1>
                 <p>
-                  we are a global team that innovate, impact and (re)- invent
-                  iconic brands, their products, services and experiences from
-                  a-to-z.
+                  we are a global team who innovates, impacts and (re)invents
+                  iconic brands, their products and services, experiences and IP
+                  from A-to-Z.
                   <br />
                   we, <b>design success</b>.
                 </p>
@@ -89,17 +91,18 @@ class WhoSection extends Component {
                   <MakingImpossible />
                 </h1>
                 <p>
-                  <b>
-                    our patented, certified and validated innovation process is
-                    used to:
-                  </b>
+                  <b>we are patented, certified and validated</b>
                 </p>
                 <ul>
+                  <li style={{ listStyle: "none", marginLeft: -25 }}>
+                    our innovation process is used to:
+                  </li>
                   <li>(re)position brands</li>
-                  <li>design new services and products</li>
+                  <li>create validated strategies for brands &amp; IP’s</li>
+                  <li>design new products and services</li>
                   <li>create ultimate experiences</li>
                   <li>develop new digital interaction</li>
-                  <li>communicate deeper and better</li>
+                  <li>communicate more intensely</li>
                   <li>impact shareholder value and stock price</li>
                 </ul>
               </div>
@@ -115,7 +118,7 @@ class WhoSection extends Component {
                   <p>
                     The award winning <b>design:success</b>
                     <br />
-                    team composes the best minds:
+                    team composes the best:
                   </p>
                   <ul>
                     <li>strategists</li>
@@ -125,7 +128,7 @@ class WhoSection extends Component {
                     <li>architects</li>
                     <li>marketers</li>
                     <li>programmers</li>
-                    <li>all expert innovators</li>
+                    <li>innovators</li>
                   </ul>
                 </div>
               </div>
