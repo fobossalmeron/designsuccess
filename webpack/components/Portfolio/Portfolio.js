@@ -23,7 +23,7 @@ class Portfolio extends Component {
       sectionToggled: false,
       proyectToggled: false,
       resourceToggled: false,
-      videoPlaying: false,
+      videoPlaying: false
     });
   }
 
@@ -73,12 +73,21 @@ class Portfolio extends Component {
   }
 
   nextProyect(selectedProyect) {
-    var indexOfSelectedSection = portfolioData.sections.indexOf(this.state.selectedSection);
-    var index = portfolioData.sections[indexOfSelectedSection].proyects.indexOf(selectedProyect);
-    if (index + 2 > portfolioData.sections[indexOfSelectedSection].proyects.length) {
-      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[0];
+    var indexOfSelectedSection = portfolioData.sections.indexOf(
+      this.state.selectedSection
+    );
+    var index = portfolioData.sections[indexOfSelectedSection].proyects.indexOf(
+      selectedProyect
+    );
+    if (
+      index + 2 >
+      portfolioData.sections[indexOfSelectedSection].proyects.length
+    ) {
+      var nextproyectName =
+        portfolioData.sections[indexOfSelectedSection].proyects[0];
     } else {
-      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[index + 1];
+      var nextproyectName =
+        portfolioData.sections[indexOfSelectedSection].proyects[index + 1];
     }
     this.setState({
       selectedProyect: nextproyectName,
@@ -88,12 +97,20 @@ class Portfolio extends Component {
   }
 
   prevProyect(selectedProyect) {
-    var indexOfSelectedSection = portfolioData.sections.indexOf(this.state.selectedSection);
-    var index = portfolioData.sections[indexOfSelectedSection].proyects.indexOf(selectedProyect);
+    var indexOfSelectedSection = portfolioData.sections.indexOf(
+      this.state.selectedSection
+    );
+    var index = portfolioData.sections[indexOfSelectedSection].proyects.indexOf(
+      selectedProyect
+    );
     if (index - 1 < 0) {
-      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[portfolioData.sections[indexOfSelectedSection].proyects.length - 1];
+      var nextproyectName =
+        portfolioData.sections[indexOfSelectedSection].proyects[
+          portfolioData.sections[indexOfSelectedSection].proyects.length - 1
+        ];
     } else {
-      var nextproyectName = portfolioData.sections[indexOfSelectedSection].proyects[index - 1];
+      var nextproyectName =
+        portfolioData.sections[indexOfSelectedSection].proyects[index - 1];
     }
     this.setState({
       selectedProyect: nextproyectName,
@@ -112,6 +129,17 @@ class Portfolio extends Component {
     });
   }
 
+  toggleSectionAndProyect(section, proyect) {
+    this.setState({
+      sectionToggled: true,
+      selectedSection: section,
+      proyectToggled: true,
+      selectedProyect: proyect,
+      resourceToggled: false,
+      videoPlaying: false
+    });
+  }
+
   toggleProyect(proyect) {
     this.setState({
       sectionToggled: true,
@@ -124,22 +152,26 @@ class Portfolio extends Component {
 
   toggleResource(resource) {
     console.log("resource toggled");
-    if (window.innerWidth > 1000 && (resource.type === "image" || resource.type === "vector")){
-      console.log("resource was image or vector and the browser is above 1000px");
+    if (
+      window.innerWidth > 1000 &&
+      (resource.type === "image" || resource.type === "vector")
+    ) {
+      console.log(
+        "resource was image or vector and the browser is above 1000px"
+      );
       return;
-    } else if (resource.type === "video"){
+    } else if (resource.type === "video") {
       this.setState({
         sectionToggled: true,
-        proyectToggled: true,
+        //proyectToggled: true,
         resourceToggled: true,
         selectedResource: resource,
         videoPlaying: true
       });
-    }
-      else {
+    } else {
       this.setState({
         sectionToggled: true,
-        proyectToggled: true,
+        //proyectToggled: true,
         resourceToggled: true,
         selectedResource: resource,
         videoPlaying: false
@@ -147,25 +179,54 @@ class Portfolio extends Component {
     }
   }
 
+  
   render() {
     var selectedSection = this.state.selectedSection;
 
-    var sectionsList = portfolioData.sections.map((section, index) => (
+    var NormalView = (section) =>(
       <li
-        className="section"
-        key={section.id}
-        onClick={() => this.toggleSection(section)}
-      >
-        <h3
-          dangerouslySetInnerHTML={{ __html: section.title }}
-          className={selectedSection === section ? "active" : ""}
-        />
-        <div className={"sectionIcon " + "section" + section.id}>
-          {section.icon}
-        </div>
-        <p dangerouslySetInnerHTML={{ __html: section.desc }} />
-      </li>
-    ));
+      className="section"
+      key={section.id}
+      onClick={() => this.toggleSection(section)}
+    >
+      <h3
+        dangerouslySetInnerHTML={{ __html: section.title }}
+        className={selectedSection === section ? "active" : ""}
+      />
+      <div className={"sectionIcon " + "section" + section.id}>
+        {section.icon}
+      </div>
+      <p dangerouslySetInnerHTML={{ __html: section.desc }} />
+    </li>
+    )
+
+    var TransformView = (section) =>(
+      <li
+      className="section"
+      key={section.id}
+      onClick={() => this.toggleSectionAndProyect(section, section.proyects[0])}
+    >
+      <h3
+        dangerouslySetInnerHTML={{ __html: section.title }}
+        className={selectedSection === section ? "active" : ""}
+      />
+      <div className={"sectionIcon " + "section" + section.id}>
+        {section.icon}
+      </div>
+      <p dangerouslySetInnerHTML={{ __html: section.desc }} />
+    </li>
+    )
+
+    var sectionsList = portfolioData.sections.map((section, index) => {
+      if (section.id === 6){
+        //return TransformView(section)
+        return NormalView(section)
+
+      }
+      else{
+        return NormalView(section)
+        }
+    });
 
     var sectionModal = (
       <SectionPortfolio
@@ -174,6 +235,7 @@ class Portfolio extends Component {
         section={this.state.selectedSection}
         sections={portfolioData.sections}
         toggleProyect={this.toggleProyect.bind(this)}
+        toggleResource={this.toggleResource.bind(this)}
         changeSection={this.toggleSection.bind(this)}
         prevModal={this.prevModal.bind(this)}
         nextModal={this.nextModal.bind(this)}

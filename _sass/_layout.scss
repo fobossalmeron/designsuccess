@@ -883,6 +883,12 @@ h2 {
                 position: relative;
                 background-position: center center;
                 background-repeat: no-repeat;
+                svg {
+                    align-self: center;
+                    width: 40px;
+                    height: 40px;
+                    z-index: 2;
+                }
                 &.static {
                     cursor: default;
                     &:after {
@@ -1265,28 +1271,27 @@ h2 {
 /*------------------------- Section 6 -------------------------*/
 
 #section6 {
-    grid-template-rows: .8fr 1fr;
-    .proyect1,
-    .proyect2 {
-        grid-column-end: span 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    .proyect1{
+        grid-column-end: span 1;
+        grid-row-end: span 1;
     }
-    .proyect3 {
-        grid-column-end: span 4,
+    .resource1{
+        justify-content: center;
     }
 }
 
 #section6proyect1 {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     li {
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
-    .resource1,
-    .resource2,
-    .resource3,
-    .resource4,
-    .resource7 {
-        grid-column-end: span 2;
+    .resource1{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
     }
 }
 

@@ -743,77 +743,18 @@ const portfolioData = {
       title: "digital & IT",
       icon: <DigitalIcon />,
       generalText:
-        "We understand that our clients want what they want, when they want it and the way they want it.</br></br>Our in-house, award winning IT and digital team, IT:Success, utilizes a simple yet powerful approach to digital and IT innovations.</br></br>By complimenting our client’s IT, strategic and marketing team, the <b>IT:Success team discovers and builds real, functional prototypes and final enterprise solutions.</b></br></br>The results curate digital experiences and <b>solutions that make impact - fast!</b>",
+"We live in the age of acceleration where the business world is more volatile, uncertain, complex and ambiguous.<br/><br/>Our patented and certified process <b>transform:now, is the next generation experience where we fuse strategy, creativity, and technology to help our customers digitally reinvent their business.</b><br/><br/>We design true digital transformations by delivering insights, ideation, validation and tangible transformational solutions in the following areas:<br/><br/><ul><li>Digital strategy & Next Digital Ventures</li><li>Customer-centric UX innovation</li><li>Digital Experience & Platforms</li><li>Omni Channel Marketing Development</li><li>Enterprise Mobility</li><li>AI Empowerment</li><li>Big Data-Driven Analysis</li></ul>",
       proyects: [
         {
           id: 1,
-          title: "digital prototyping",
+          title: "",
           text:
-            "Keeping fast and agile prototyping in mind, d:s facilitates a multidisciplinary team of experts to prototype a concept and test it with real, existing and potential, customers.</br>Validating UI, experience (web, cross-platform, application, etc.) product and business models.",
-          resources: [
-            {
-              id: 1,
-              type: "vector"
-            },
-            {
-              id: 2,
-              type: "vector"
-            },
-            {
-              id: 3,
-              type: "vector"
-            },
-            {
-              id: 4,
-              type: "vector"
-            },
-            {
-              id: 5,
-              type: "vector"
-            },
-            {
-              id: 6,
-              type: "vector"
-            },
-            {
-              id: 7,
-              type: "vector"
-            }
-          ]
-        },
-        {
-          id: 2,
-          title: "crypto expertise worth gold",
-          text:
-            "Experience is worth more than gold – and the d:s team is always ahead of the game. In 2015, we built fully functional, crypto currency engines, infrastructures and exchanges to/from USD / MEX currencies; seamlessly. Our innovation was a solid solution that also won <b>‘Best in Show’</b> at the prestigious <b>Finovate Conference.</b>",
+          "We live in the age of acceleration where the business world is more volatile, uncertain, complex and ambiguous.<br/><br/>Our patented and certified process <b>transform:now, is the next generation experience where we fuse strategy, creativity, and technology to help our customers digitally reinvent their business.</b><br/><br/>We design true digital transformations by delivering insights, ideation, validation and tangible transformational solutions in the following areas:<br/><br/><ul><li>Digital strategy & Next Digital Ventures</li><li>Customer-centric UX innovation</li><li>Digital Experience & Platforms</li><li>Omni Channel Marketing Development</li><li>Enterprise Mobility</li><li>AI Empowerment</li><li>Big Data-Driven Analysis</li></ul>",
           resources: [
             {
               id: 1,
               type: "video",
-              url: "https://vimeo.com/133416668"
-            }
-          ]
-        },
-        {
-          id: 3,
-          title: "award winning applications",
-          text:
-            "From experience strategy to application innovation to system design, integration and implementation: our process is the only in class to also offer consumer and digital validation together with fully executed app development from a-to-z.",
-          resources: [
-            {
-              id: 1,
-              type: "video",
-              url: "https://vimeo.com/228273116"
-            },
-            {
-              id: 2,
-              type: "video",
-              url: "https://vimeo.com/237621274"
-            },
-            {
-              id: 3,
-              type: "video",
-              url: "https://vimeo.com/143683357"
+              url: "https://vimeo.com/343751758"
             }
           ]
         }

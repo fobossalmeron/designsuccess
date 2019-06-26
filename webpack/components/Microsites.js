@@ -21,11 +21,12 @@ const micrositesData = {
     },
     {
       id: 3,
-      title: "digital:success -</br>IT & digital innovation implementation",
+      title:
+        "transform:now<br/>market research IT & digital innovation implementation",
       desc:
-        "Award-winning development of digital strategies, experiences, applications, prototypes and enterprise solutions.",
-      image: "digital.jpg",
-      link: "digitalsuccess/"
+        "Next generation digital transformations with tangible and measurable impacts to help organizations lead, grow and thrive.",
+      image: "transform.jpg",
+      link: "transformnow/"
     },
     {
       id: 4,
@@ -75,22 +76,20 @@ class Microsites extends Component {
   componentDidMount() {
     var firstTime = setTimeout(
       function() {
-          this.setState({safariReload: true}, () => this.removeClass())
-      }
-      .bind(this),
+        this.setState({ safariReload: true }, () => this.removeClass());
+      }.bind(this),
       100
-  );
+    );
   }
 
-  removeClass(){
+  removeClass() {
     console.log("entré a removeclass");
     var secondTime = setTimeout(
       function() {
-          this.setState({safariReload: false});
-      }
-      .bind(this),
+        this.setState({ safariReload: false });
+      }.bind(this),
       1500
-  );
+    );
     console.log("sali de removeclass");
   }
 
@@ -165,7 +164,7 @@ class Microsites extends Component {
         }}
       />
     ));
-    var reload = this.state.safariReload? "special" : "";
+    var reload = this.state.safariReload ? "special" : "";
     return (
       <ul className={"micrositesContainer " + reload}>
         {micrositesList}
