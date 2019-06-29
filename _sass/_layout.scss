@@ -117,7 +117,7 @@ section {
         height: 100vh
     }
     .firstGrid {
-        grid-template-columns: 1fr 1fr .5fr;
+        grid-template-columns: 1fr 1fr .2fr;
         padding: 0 10% 0 16%;
         position: relative;
         column-gap: 10rem;
@@ -133,7 +133,6 @@ section {
             }
         }
         p {
-            max-width: 300px;
         }
     }
     .secondFirstGrid {

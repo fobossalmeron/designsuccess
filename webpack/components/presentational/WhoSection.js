@@ -75,9 +75,9 @@ class WhoSection extends Component {
                   <MakingImpossible />
                 </h1>
                 <p>
-                  we are a global team who innovates, impacts and (re)invents
-                  iconic brands, their products and services, experiences and IP
-                  from A-to-Z.
+                  We are a global team who innovate business solutions to impact
+                  and reinvent iconic brands, their products, services,
+                  solutions and experiences from a-to-z.
                   <br />
                   we, <b>design success</b>.
                 </p>
@@ -91,19 +91,17 @@ class WhoSection extends Component {
                   <MakingImpossible />
                 </h1>
                 <p>
-                  <b>we are patented, certified and validated</b>
+                  <b>Our patented, certified
+and validated innovation
+process is used to:</b>
                 </p>
                 <ul>
-                  <li style={{ listStyle: "none", marginLeft: -25 }}>
-                    our innovation process is used to:
-                  </li>
-                  <li>(re)position brands</li>
-                  <li>create validated strategies for brands &amp; IP’s</li>
-                  <li>design new products and services</li>
-                  <li>create ultimate experiences</li>
-                  <li>develop new digital interaction</li>
-                  <li>communicate more intensely</li>
-                  <li>impact shareholder value and stock price</li>
+                <li>create digital transformation</li>
+                <li>(re)position brands</li>
+                <li>design new services and products</li>
+                <li>create ultimate experiences</li>
+                <li>communicate deeper and better</li>
+                <li>impact shareholder value and stock price</li>
                 </ul>
               </div>
             </div>
